@@ -32,17 +32,15 @@
 
     }
 
-    header{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 100px;
-      z-index: 10;
-      background: purple;
+    header .logo{
+      position: relative
+    }
+
+    header div div button {
+    width: 100%;
+}
+    header hr {
+    border: 1px solid black;
     }
 
     header .logo{
@@ -51,6 +49,31 @@
     }
 </style>
 <body>
+
+  <header class="container mt-3">
+    <div class="row">
+        <div id="backBTN" class="col-3">
+            <button type="button" class="btn btn-primary">Back</button>
+        </div>
+        <div id="notifBTN" class="col-3">
+            <button type="button" class="btn btn-primary">Notif</button>
+        </div>
+        <div class="col-3">
+        </div>
+        <div id="logoutBTN" class="col-3">
+            <button type="button" class="btn btn-primary">Logout</button>
+        </div>
+    </div>
+    <hr/>
+</header>
+
+<div class="text-center">
+  <div class="row text-center">
+    <div class="col-sm-12 text-center">
+      <img src="Logo Frontend.png" alt="Avatar" width="200" height="200">
+    </div>
+  </div>
+</div>
 
   
 <div class="container mt-5 text-center">
