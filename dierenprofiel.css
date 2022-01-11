@@ -1,0 +1,51 @@
+body{
+    margin: 0px;
+}
+header div div button {
+    width: 100%;
+    }
+    header hr {
+    border: 1px solid black;
+}
+#grafiek{
+    border-radius:10px;
+    width: 90%;
+    height: 150px;
+    background-color:lightblue;
+    margin-top: 10px;
+    margin: left 5%;
+    border:1px solid gray
+}
+
+#gewicht{
+    border-radius:10px;
+    margin-top: 5px;
+    width: fit-content;
+    margin-left:8px;
+}
+#bcs{
+    border-radius:10px;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+#lengte{
+    border-radius:10px;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+#voeding{
+    border-radius:10px;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+#aanpassen{
+    border-radius:10px;
+    margin-top: 5px;
+    width: fit-content;
+    margin-left:20px;
+}
+#medicatie{
+    border-radius:10px;
+    margin-top: 5px;
+    margin-left:57px;
+}
