@@ -1,0 +1,25 @@
+header div div button {
+    width: 100%;
+}
+header hr {
+    border: 1px solid black;
+}
+
+main div div img {
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    border: 3px solid black;
+}
+.petAlert {
+    color: red;
+    font-size: 50px;
+    margin-top: -10px;
+}
+.petName {
+    font-weight: 600;
+    font-size: 20px;
+}
+.alertInfo {
+    margin-top: -20px;
+}
