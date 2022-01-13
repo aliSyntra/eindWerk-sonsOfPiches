@@ -4,22 +4,25 @@ header div div button {
 header hr {
     border: 1px solid black;
 }
-
+/* maakt de afbeelding rond */
 main div div img {
     width: 64px;
     height: 64px;
     border-radius: 100%;
     border: 3px solid black;
 }
+/* uitroep teken */
 .petAlert {
     color: red;
     font-size: 50px;
     margin-top: -10px;
 }
+/* namen dier  */
 .petName {
     font-weight: 600;
     font-size: 20px;
 }
+/* alert */
 .alertInfo {
     margin-top: -20px;
 }
