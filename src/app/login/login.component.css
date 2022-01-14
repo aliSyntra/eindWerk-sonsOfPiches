@@ -6,6 +6,9 @@ body{
 .container{
     width:350px;
 }
+#logo {
+    width: 100%;
+}
 /* login wat bovenaan staat */
 #login{
     font-family: 'Kaushan Script', cursive;
@@ -27,11 +30,8 @@ body{
 #loginButton{
     margin-top: 10px;
     font-size: 20px;
-    width: 250px;
-    margin-left:50px;
+    width: 100%;
     border-radius: 15px;
-    background-color: rgb(50, 74, 207);
-    color: lightgray;
     font-family: cursive;
 }
 
@@ -55,9 +55,4 @@ hr{
     font-family: 'Kaushan Script', cursive;
     text-decoration: none;
     width: fit-content;
-}
-/* pushes the container down to the center */
-.container{
- 
-    margin-top: 40%;
 }
