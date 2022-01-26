@@ -5,11 +5,15 @@ header hr {
     border: 1px solid black;
 }
 /* maakt de afbeelding rond */
-main div div img {
+main div img {
     width: 64px;
     height: 64px;
     border-radius: 100%;
     border: 3px solid black;
+    padding: 0;
+}
+main div hr {
+    margin-top: 15px;
 }
 /* uitroep teken */
 .petAlert {
