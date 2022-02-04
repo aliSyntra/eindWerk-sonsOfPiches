@@ -15,31 +15,22 @@
   <div class="row">
     <div class=col-12>
       <div class="label">Email address </div>
-      <input type="text"class="forms" id="email">
+      <input type="text" autocomplete="false" class="form-control" [(ngModel)]="email">
     </div>
   </div>
   <!-- password form -->
   <div class="row">
     <div class="col-12">
       <div class="label">password</div>
-      <input type="password"class="forms" id="password"><br>
+      <input type="password" [(ngModel)]="password" class="form-control"><br>
     </div>
   </div>
   <!-- button-->
   <div class="row">
     <div class="col-2"></div>
     <div class="col-8">
-      <button id="loginButton" class="btn btn-primary">login</button>
+      <button (click)="login()" id="loginButton" class="btn btn-primary">login</button>
     </div>
     <div class="col-2"></div>
-  </div>
-  <!-- of  -->
-  <div class="row">
-    <div class="col-12">
-      <hr class="hr">
-      <div class="or">or</div>
-    </div>
-    <!-- signup -->
-    <a href="#"id="signup">signup here</a>
   </div>
 </div>

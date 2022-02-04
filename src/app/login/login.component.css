@@ -34,25 +34,3 @@ body{
     border-radius: 15px;
     font-family: cursive;
 }
-
-hr{
-    margin-left:15px;
-    width: 300px;
-}
-
-.or{
-    position: absolute;
-    background-color:white;
-    margin-left: 135px;
-    margin-top:-30px ;
-    width:55px;
-    padding-left:15px;
-}
-
-#signup{
-    margin-left:115px;
-    font-size: 17px;
-    font-family: 'Kaushan Script', cursive;
-    text-decoration: none;
-    width: fit-content;
-}

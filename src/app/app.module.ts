@@ -11,6 +11,8 @@ import { MakeEditComponent } from './make-edit/make-edit.component';
 import { AnimalProfileComponent } from './animal-profile/animal-profile.component';
 import { animate } from '@angular/animations';
 import { MedicationComponent } from './medication/medication.component';
+import { FormsModule } from '@angular/forms';
+
 
 const routes: Routes = [
   {path: "", redirectTo: 'login', pathMatch: 'full'},
@@ -32,6 +34,7 @@ const routes: Routes = [
     MedicationComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
