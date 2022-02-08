@@ -28,6 +28,8 @@ export class LoginComponent implements OnInit {
             // yay, it does.. true, so initiate authentication with sessionStorage
             sessionStorage.setItem('pass', this.encryptPass);
             alert('login success');
+            // redirectTo: 'mainpage'
+            // window.location.href="mainpage"
             //redirect to dashboard (in the ngOninit dashboard component check session else redirect to login)
           } else {
             alert('wrong username or password');
