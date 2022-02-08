@@ -20,6 +20,7 @@
     <hr/>
 </header>
 <!-- einde header -->
+
 <!-- container met alles er in -->
 <main class="container mt-3">
     <div class="row mt-3">
@@ -71,15 +72,43 @@
         </div>
         <div class="col-1"></div>
     </div> -->
+
     <div *ngFor="let useranimal of useranimals$" class="row mt-3">
+        <!--spacer div-->
         <div class="col-1"></div>
-        <div *ngIf="useranimal.animal_id == 1; then thenBlock else elseBlock" class="col-3">
-        </div>
-            <ng-template #thenBlock><img src="../../assets/images/dog.png"/></ng-template>
-            <ng-template #elseBlock><img src="../../assets/images/cat.png"/></ng-template>
-        <div class="col-7">
-            <p class="petName mt-3"> {{useranimal.name}} </p>
-        </div>
+        
+        <!--exclamation mark for medication-->
+        <div *ngIf="useranimal.medid; then exclBlock"></div>
+            <ng-template #exclBlock>
+                <div class="col-1 petAlert">
+                    !
+                </div>
+            </ng-template>
+
+        <!--animal image, should replace with a data64 from sql at some point-->
+        <div *ngIf="useranimal.animal_id == 1; then thenBlock else elseBlock" class="col-3"></div>
+            <ng-template #thenBlock>
+                <img src="../../assets/images/dog.png"/>
+            </ng-template>
+            <ng-template #elseBlock>
+                <img src="../../assets/images/cat.png"/>
+            </ng-template>
+        
+        <!--main display div-->
+        <div *ngIf="useranimal.medid; then medBlock else normBlock"></div>
+        <ng-template #normBlock>
+            <div (click)="gotoAnimalProfile(useranimal.id)" class="col-7">
+                <p class="petName mt-3"> {{useranimal.name}} </p>
+            </div>
+        </ng-template>
+        <ng-template #medBlock>
+            <div (click)="gotoAnimalProfile(useranimal.id)" class="col-6">
+                <p class="petName mt-1"> {{useranimal.name}} </p>
+                <p class="alertInfo"> {{useranimal.description}} </p>
+            </div>
+        </ng-template>
+
+        <!--spacer div-->
         <div class="col-1"></div>
         <hr/>
     </div>
