@@ -12,9 +12,15 @@ main div img {
     border: 3px solid black;
     padding: 0;
 }
+/*hr at the end of each animal div*/
 main div hr {
     margin-top: 15px;
 }
+/*text next to make new button*/
+main div div b {
+    margin-left: 10px;
+}
+
 /* uitroep teken */
 .petAlert {
     color: red;

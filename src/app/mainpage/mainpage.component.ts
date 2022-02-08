@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { MainpageService } from "../shared/service/mainpage.service";
 import { Useranimal } from "../../app/shared/model/useranimal.model";
@@ -9,13 +10,22 @@ import { Useranimal } from "../../app/shared/model/useranimal.model";
   styleUrls: ['./mainpage.component.css']
 })
 export class MainpageComponent implements OnInit {
-  useranimals$!: Useranimal[];
+  useranimals$!: any[];
 
-  constructor(private mainpageService: MainpageService) {}
+  constructor(
+    private mainpageService: MainpageService,
+    private _router: Router
+    ) {}
 
   ngOnInit() {
    this.mainpageService.getUseranimals()
    .subscribe(useranimal => this.useranimals$ = useranimal);
+  }
+
+  gotoAnimalProfile(animalId:number) {
+    const stringId:string = animalId.toString();
+    sessionStorage.setItem("requestedAnimal", stringId);
+    this._router.navigate(["animalProfile"]);
   }
 
 }
