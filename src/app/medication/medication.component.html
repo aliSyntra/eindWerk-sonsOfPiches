@@ -1,24 +1,24 @@
- <!-- header -->
- <header class="container mt-3">
+<!-- header -->
+<header class="container mt-3">
     <div class="row">
     <!-- deze button gaat terug naar de vorgige pagina  -->
         <div id="backBTN" class="col-3">
-            <button type= "button"(click)="back()" class="btn btn-primary">Back</button>
+            <button type="button" class="btn btn-primary">Back</button>
         </div>
     <!-- als je op deze button klikt verschijnen alle notificaties in een dropdown -->
         <div id="notifBTN" class="col-3">
-            <button type="button" (click)="dropdown()" class="btn btn-primary">Notif</button>
+            <button type="button" class="btn btn-primary">Notif</button>
         </div>
     <!-- dit is gwn een extra div om de buttons uit elkaar te halen  -->
         <div class="col-3">
         </div>
     <!-- als je op deze button klikt ga je terug naar de login page en word de sessie beeindigd! -->
         <div id="logoutBTN" class="col-3">
-            <button type="button" (click)= "logout()" class="btn btn-primary">Logout</button>
+            <button type="button" class="btn btn-primary">Logout</button>
         </div>
     </div>
     <hr />
-  </header>
+</header>
 <!-- einde header! -->
 <div class="container mt-5 text-center">
     <div class="row text-center">
@@ -28,25 +28,25 @@
       </div>
       <div>
           <label for="name"><strong>Name</strong></label><br>
-          <input type="text" name="name" id="name" required>
+          <input type="text" #name required>
       </div>
       <div>
           <label for="startdate"><strong>Begindatum</strong></label><br>
-          <input type="date" name="begindate" id="begindate" required>
+          <input type="date" #startdate required>
       </div>
       <div>
-          <label for="einddate"><strong>Eindatum</strong></label><br>
-          <input type="date" name="eindatum" id="eindatum" required>
+          <label for="einddate"><strong>Einddatum</strong></label><br>
+          <input type="date"#einddatum required>
       
       <div>
           <label for="weight"><strong>Aantal</strong></label><br>
-          <input type="number" name="aantal" id="aantal" required>
+          <input type="number" #aantal required>
       </div>
       <div>
           <label for="name"><strong>Description</strong></label><br>
-          <input type="text" name="description" id="description" required>
+          <input type="text" #description required>
       <div>
-        <button type="button" class="medButton">Med Toev</button>
+        <button type="button" (click)="addMedication(name.value,startdate.value,einddatum.value,description.value)" class="medButton">Med Toev</button>
       </div>
     </div>
   </div>
