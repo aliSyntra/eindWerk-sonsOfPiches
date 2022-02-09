@@ -12,4 +12,18 @@ export class MedicationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //headerbuttons
+  back(){
+    window.location.href="animalProfile"
+  }
+
+  logout(){
+    window.location.href="login"
+  }
+  dropdown(){
+    console.log("ikieki")
+  }
+  make(){
+    window.location.href="makeEdit"
+  }
 }

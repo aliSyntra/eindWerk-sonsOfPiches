@@ -1,23 +1,23 @@
-<!-- header die op iedere pagina staat behalve de loginpage -->
-<header class="container mt-3">
+ <!-- header -->
+ <header class="container mt-3">
     <div class="row">
     <!-- deze button gaat terug naar de vorgige pagina  -->
         <div id="backBTN" class="col-3">
-            <button type="button" class="btn btn-primary">Back</button> 
+            <button type="button"(click)="back()" class="btn btn-primary">Back</button>
         </div>
     <!-- als je op deze button klikt verschijnen alle notificaties in een dropdown -->
         <div id="notifBTN" class="col-3">
-            <button type="button" class="btn btn-primary">Notif</button>
+            <button type="button" (click)="dropdown()" class="btn btn-primary">Notif</button>
         </div>
     <!-- dit is gwn een extra div om de buttons uit elkaar te halen  -->
         <div class="col-3">
         </div>
     <!-- als je op deze button klikt ga je terug naar de login page en word de sessie beeindigd! -->
         <div id="logoutBTN" class="col-3">
-            <button type="button" class="btn btn-primary">Logout</button>
+            <button type="button" (click)= "logout()" class="btn btn-primary">Logout</button>
         </div>
     </div>
-    <hr/>
+    <hr />
 </header>
 <!-- einde header -->
 
@@ -27,7 +27,7 @@
         <div class="col-1"></div>
         <!-- button om nieuwe dier aan te maken -->
         <div class="col-10">
-            <button type="button" class="btn btn-primary">+</button>
+            <button type="button"(click)="make()" class="btn btn-primary">+</button>
             <b>nieuw dier aanmaken</b>
         </div>
         <div class="col-1"></div>

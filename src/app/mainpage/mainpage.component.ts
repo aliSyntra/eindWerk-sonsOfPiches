@@ -28,4 +28,19 @@ export class MainpageComponent implements OnInit {
     this._router.navigate(["animalProfile"]);
   }
 
+  //headerbuttons
+  back(){
+    window.location.href="mainpage"
+  }
+
+  logout(){
+    window.location.href="login"
+  }
+  dropdown(){
+    console.log("ikieki")
+  }
+  make(){
+    window.location.href="makeEdit"
+  }
+
 }

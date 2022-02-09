@@ -9,6 +9,11 @@ main div div button {
     margin-top: 5px;
 }
 
+#dropdown {
+    width: 200px;
+    height:40px;
+    background-color:#0275d8 ;
+}
 #animalName {
     font-weight: bold;
 }
