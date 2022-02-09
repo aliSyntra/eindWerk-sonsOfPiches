@@ -18,6 +18,11 @@ export class MainpageComponent implements OnInit {
     ) {}
 
   ngOnInit() {
+    let name = localStorage.getItem('pass');
+    if (!name) {
+      this._router.navigate(["login"]);
+    }
+
    this.mainpageService.getUseranimals()
    .subscribe(useranimal => this.useranimals$ = useranimal);
   }

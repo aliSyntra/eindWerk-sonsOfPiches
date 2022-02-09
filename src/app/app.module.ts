@@ -12,6 +12,7 @@ import { AnimalProfileComponent } from './animal-profile/animal-profile.componen
 import { animate } from '@angular/animations';
 import { MedicationComponent } from './medication/medication.component';
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path: "mainpage", component: MainpageComponent},
   {path: "makeEdit", component: MakeEditComponent},
   {path: "animalProfile", component: AnimalProfileComponent},
-  {path: "medication", component: MedicationComponent}
+  {path: "medication", component: MedicationComponent},
+  {path: "register", component: RegisterComponent}
 
 ];
 
@@ -31,7 +33,8 @@ const routes: Routes = [
     LoginComponent,
     MakeEditComponent,
     AnimalProfileComponent,
-    MedicationComponent
+    MedicationComponent,
+    RegisterComponent
   ],
   imports: [
     FormsModule,
