@@ -1,65 +1,65 @@
- <!-- header -->
- <header class="container mt-3">
+<header class="container mt-3">
   <div class="row">
-  <!-- deze button gaat terug naar de vorgige pagina  -->
       <div id="backBTN" class="col-3">
-          <button type= "button"(click)="back()" class="btn btn-primary">Back</button>
+          <button type="button" class="btn btn-primary">Back</button>
       </div>
-  <!-- als je op deze button klikt verschijnen alle notificaties in een dropdown -->
       <div id="notifBTN" class="col-3">
-          <button type="button" (click)="dropdown()" class="btn btn-primary">Notif</button>
+          <button type="button" class="btn btn-primary">Notif</button>
       </div>
-  <!-- dit is gwn een extra div om de buttons uit elkaar te halen  -->
       <div class="col-3">
       </div>
-  <!-- als je op deze button klikt ga je terug naar de login page en word de sessie beeindigd! -->
       <div id="logoutBTN" class="col-3">
-          <button type="button" (click)= "logout()" class="btn btn-primary">Logout</button>
+          <button type="button" class="btn btn-primary">Logout</button>
       </div>
   </div>
-  <hr />
+  <hr/>
 </header>
 
 <div class="container-fluid p-5  text-center">
 <div class="text-center">
-  <div class="row text-center">
-    <div class="col-sm-12 text-center">
-      <img src="Logo Frontend.png" alt="Avatar" width="100" height="100">
-      <img src="Logo Frontend.png" alt="Avatar" width="100" height="100">
-    </div>
-    <div id="notifBTN" class="col-12">
-     <button type="button" class="btn btn-primary">Med Toe</button>
-     <button type="button" class="btn btn-primary">Aanmaken</button>
-    </div>
+<div class="row text-center">
+  <div class="col-sm-12 text-center">
+    <img src="Logo Frontend.png" alt="Avatar" width="100" height="100">
+    <img src="Logo Frontend.png" alt="Avatar" width="100" height="100">
   </div>
+  <div id="notifBTN" class="col-12">
+   <button type="button" class="btn btn-primary">Med Toe</button>
+   <button type="button" class="btn btn-primary">Aanmaken</button>
+  </div>
+</div>
 </div>
 
 <div class="container mt-3 text-center">
-  <div class="row">
-    <div id="name" class="col-12">
-     <label for="name"><strong>Name</strong></label><br>
-        <input type="text" name="name" id="name" required>
-    </div>
-    <div id="notifBTN" class="col-12">
-     <label for="breed"><strong>Breed</strong></label><br>
-        <input type="text" name="Breed" id="breed" required>
-    </div>
-    <div id="notifBTN" class="col-12">
-     <label for="date"><strong>Birthday</strong></label><br>
-        <input type="date" name="date" id="date" required>
-    </div>
-    <div id="notifBTN" class="col-12">
-     <label for="weight"><strong>Weigth</strong></label><br>
-        <input type="number" name="weight" id="weight" required>
-    </div>
-    <div id="notifBTN" class="col-12">
-     <label for="size"><strong>Size</strong></label><br>
-        <input type="number" name="size" id="size" required>
-    </div>
-    <div id="notifBTN" class="col-12">
-     <button type="button" class="btn btn-primary">Med Toe</button>
-     <button type="button" class="btn btn-primary">Aanmaken</button>
-    </div>
+<div class="row">
+  <div id="name" class="col-12">
+   <label for="name"><strong>Name</strong></label><br>
+      <input type="text" #name required>
   </div>
+  <div id="notifBTN" class="col-12">
+   <label for="breed"><strong>Breed</strong></label><br>
+      <input type="text" #breed required>
+  </div>
+  <div id="notifBTN" class="col-12">
+   <label for="date"><strong>Birthday</strong></label><br>
+      <input type="date" #date required>
+  </div>
+  <div id="notifBTN" class="col-12">
+   <label for="weight"><strong>Weigth</strong></label><br>
+      <input type="number" #weight required>
+  </div>
+  <div id="notifBTN" class="col-12">
+   <label for="size"><strong>Size</strong></label><br>
+      <input type="number" #size required>
+  </div>
+  <div id="notifBTN" class="col-12">
+   <button type="button" class="btn btn-primary">Med Toe</button>
+   <button type="button" class="btn btn-primary">Aanmaken</button>
+  </div>
+
+  <div>
+    <button type="button" (click)="addAnimal(name.value,breed.value,date.value,weight.value,size.value)" class="medButton">Animal Toev</button>></button>
+  </div>
+
+</div>
 </div>
 </div>
