@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MedicationService } from '../shared/service/medication.service';
 @Component({
   selector: 'app-medication',
   templateUrl: './medication.component.html',
@@ -7,23 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MedicationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mediserv:MedicationService ) { }
 
   ngOnInit(): void {
+
+ 
   }
 
-  //headerbuttons
-  back(){
-    window.location.href="animalProfile"
+  addMedication(name,startdate,einddatum,description) {
+    console.log(name,startdate,einddatum,description);
+    // niew object maken vanm mijn input
+    let newMedObj = {
+      name: name,
+      startdate:startdate,
+      einddatum:einddatum,
+      description:description
+    };
+    // check
+    console.log(newMedObj);
+    // stuur mijn object door naar mijn service voor verwerking API
+    this.mediserv.addMedication(newMedObj);
+
+
   }
 
-  logout(){
-    window.location.href="login"
-  }
-  dropdown(){
-    console.log("ikieki")
-  }
-  make(){
-    window.location.href="makeEdit"
-  }
 }
