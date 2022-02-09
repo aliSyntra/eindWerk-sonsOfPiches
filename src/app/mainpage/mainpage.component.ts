@@ -35,7 +35,7 @@ export class MainpageComponent implements OnInit {
 
   //headerbuttons
   back(){
-    window.location.href="mainpage"
+    window.location.href="login "
   }
 
   logout(){
