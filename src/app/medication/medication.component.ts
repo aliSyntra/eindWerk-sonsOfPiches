@@ -28,7 +28,19 @@ export class MedicationComponent implements OnInit {
     // stuur mijn object door naar mijn service voor verwerking API
     this.mediserv.addMedication(newMedObj);
 
-
+  }
+  //headerbuttons
+  back(){
+    window.location.href="animalProfile"
   }
 
+  logout(){
+    window.location.href="login"
+  }
+  dropdown(){
+    console.log("ikieki")
+  }
+  make(){
+    window.location.href="makeEdit"
+  }
 }

@@ -31,5 +31,16 @@ export class MakeEditComponent implements OnInit {
       // stuur mijn object door naar mijn service voor verwerking API
       this.makeEditserv.addAnimal(newMakeAnimalObj);
   }
+  //header buttons
+  dropdown(){
+    console.log("ikieki")
+  }
+  back(){
+    window.location.href="mainpage"
+  }
+
+  logout(){
+    window.location.href="login"
+  }
 }
 
