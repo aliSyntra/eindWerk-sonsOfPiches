@@ -14,13 +14,14 @@ export class MedicationComponent implements OnInit {
  
   }
 
-  addMedication(name,startdate,einddatum,description) {
-    console.log(name,startdate,einddatum,description);
+  addMedication(name,startdate,einddatum,aantal,description) {
+    console.log(name,startdate,einddatum,aantal,description);
     // niew object maken vanm mijn input
     let newMedObj = {
       name: name,
       startdate:startdate,
       einddatum:einddatum,
+      aantal: aantal,
       description:description
     };
     // check
