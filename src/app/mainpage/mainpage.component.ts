@@ -35,7 +35,8 @@ export class MainpageComponent implements OnInit {
 
   //headerbuttons
   back(){
-    window.location.href="login "
+    window.location.href="login"
+    localStorage.setItem("pass","")
   }
 
   logout(){
