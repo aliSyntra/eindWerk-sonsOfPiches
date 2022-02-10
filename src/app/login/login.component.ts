@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
           // check if our hashed input equals the hashed input from our DB
           if (res[0].password == this.encryptPass) {
             // yay, it does.. true, so initiate authentication with sessionStorage
-            sessionStorage.setItem('pass', this.encryptPass);
+            localStorage.setItem('pass', this.encryptPass);
             // alert('login success');
             // redirectTo: 'mainpage'
             window.location.href="mainpage"

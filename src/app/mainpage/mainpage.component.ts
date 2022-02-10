@@ -40,6 +40,7 @@ export class MainpageComponent implements OnInit {
 
   logout(){
     window.location.href="login"
+    localStorage.setItem("pass","")
   }
   dropdown(){
     console.log("ikieki")
