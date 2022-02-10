@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MedicationService } from '../shared/service/medication.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-medication',
   templateUrl: './medication.component.html',
@@ -7,10 +8,14 @@ import { MedicationService } from '../shared/service/medication.service';
 })
 export class MedicationComponent implements OnInit {
 
-  constructor(private mediserv:MedicationService ) { }
+  constructor(private mediserv:MedicationService,
+    private _router: Router) { }
 
   ngOnInit(): void {
-
+    let name = localStorage.getItem('pass');
+    if (!name) {
+      this._router.navigate(["login"]);
+    }
  
   }
 
@@ -37,6 +42,7 @@ export class MedicationComponent implements OnInit {
 
   logout(){
     window.location.href="login"
+    localStorage.setItem("pass","")
   }
   dropdown(){
     console.log("ikieki")

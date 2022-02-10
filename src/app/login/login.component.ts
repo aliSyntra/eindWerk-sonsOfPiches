@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as CryptoJS from 'crypto-js';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -37,7 +37,10 @@ export class LoginComponent implements OnInit {
           }
         }})
   }
-  constructor() { }
+  signup(){
+    this._router.navigate(["register"]);
+  }
+  constructor( private _router: Router) { }
 
   ngOnInit(): void {
   }

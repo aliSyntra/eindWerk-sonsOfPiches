@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MakeEditService } from '../shared/service/make-edit.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,11 +11,16 @@ import { MakeEditService } from '../shared/service/make-edit.service';
 
 export class MakeEditComponent implements OnInit {
 
-  constructor(private makeEditserv: MakeEditService) {}
+  constructor(
+    private makeEditserv: MakeEditService,
+    private _router: Router
+    ) {}
 
-    ngOnInit(): void {
-      
-    }
+    ngOnInit() {
+      let name = localStorage.getItem('pass');
+    if (!name) {
+      this._router.navigate(["login"]);
+    }}
 
     addAnimal(name,breed,date,weight,size) {
       console.log(name,breed,date,weight,size);
@@ -40,6 +46,7 @@ export class MakeEditComponent implements OnInit {
   }
 
   logout(){
+    localStorage.setItem("pass","")
     window.location.href="login"
   }
 }

@@ -27,9 +27,9 @@ export class RegisterComponent implements OnInit {
     })
     .then(function(res){ 
       console.log(res) 
-      alert('register OK');
+      // alert('register OK');
       // melding registration OK, redirect naar dashboard bv....
-    
+      window.location.href = "login"
     })
     .catch(function(res){ console.log(res) })
 
