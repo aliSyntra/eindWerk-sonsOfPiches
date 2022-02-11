@@ -35,19 +35,19 @@ export class MainpageComponent implements OnInit {
 
   //headerbuttons
   back(){
-    window.location.href="login"
+     this._router.navigate(["login"]);
     localStorage.setItem("pass","")
   }
 
   logout(){
-    window.location.href="login"
+     this._router.navigate(["login"]);
     localStorage.setItem("pass","")
   }
   dropdown(){
     console.log("ikieki")
   }
   make(){
-    window.location.href="makeEdit"
+    this._router.navigate(["makeEdit"]);
   }
 
 }

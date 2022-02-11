@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as CryptoJS from 'crypto-js';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -11,10 +12,12 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+password!:string
+encryptPass:any
   makeUser(name,email,password) {
     // console.log(name,email,password);
-    let newUser = { name: name, email: email, password: password };
+    this.encryptPass= CryptoJS.MD5(this.password)
+    let newUser = { name: name, email: email, password: this.encryptPass};
 
     fetch("http://sonsofkittens.be/api/users",
     {
