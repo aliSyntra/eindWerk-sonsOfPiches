@@ -13,6 +13,7 @@ import { animate } from '@angular/animations';
 import { MedicationComponent } from './medication/medication.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
+import { EditComponent } from './edit/edit.component';
 
 
 const routes: Routes = [
@@ -34,7 +35,8 @@ const routes: Routes = [
     MakeEditComponent,
     AnimalProfileComponent,
     MedicationComponent,
-    RegisterComponent
+    RegisterComponent,
+    EditComponent
   ],
   imports: [
     FormsModule,

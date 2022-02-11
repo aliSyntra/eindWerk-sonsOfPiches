@@ -22,15 +22,22 @@ export class MakeEditComponent implements OnInit {
       this._router.navigate(["login"]);
     }}
 
-    addAnimal(name,breed,date,weight,size) {
-      console.log(name,breed,date,weight,size);
+    addAnimal(name,genre,breed,date,weight,size,chipnumber,insurance) {
+      console.log(name,genre,breed,date,weight,size,chipnumber,insurance);
       // niew object maken vanm mijn input
         let newMakeAnimalObj = {
+          animal_id: 1,
           name: name,
-          breed: breed,
-          date: date,
+          gender: 'male',
+          birthday: date,
           weight: weight,
-          size: size
+          size: size,
+          breed_id: breed,
+          user_id: 1,
+          chip: 25435,
+          insurance: 323443
+          
+          
       };
       // check
       console.log(newMakeAnimalObj);

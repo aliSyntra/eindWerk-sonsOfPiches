@@ -12,7 +12,7 @@ export class MakeEditService {
       body: JSON.stringify(newMakeAnimalObj)
     };
 
-    fetch('http://sonsofkittens.be/api/make-edit', requestOptions)
+    fetch('http://sonsofkittens.be/api/useranimals', requestOptions)
     .then(response => response.json())
 
   }

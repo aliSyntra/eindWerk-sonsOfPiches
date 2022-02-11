@@ -33,8 +33,8 @@
 <br>
     <div class="row">
     	<div class="col-sm-12 d-flex justify-content-center">
-    	    <img src="Logo Frontend.png" class="medButton mx-4" alt="Avatar" width="100" height="100">
-            <img src="Logo Frontend.png" class="medButton mx-1" alt="Avatar" width="100" height="100">
+    	    <img src="../../assets/images/cat.png" class="medButton mx-4" alt="Avatar" width="100" height="100">
+            <img src="../../assets/images/dog.png" class="medButton mx-1" alt="Avatar" width="100" height="100">
     	</div>
    </div>
   
@@ -44,13 +44,26 @@
     <div class="col-sm-4"></div>
   </div>
 
-
-   <div class="row">
+  <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-4 text-center"><input type="text" #name required></div>
     <div class="col-sm-4"></div>
   </div>
   <br>
+
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 text-center"><strong>Genre</strong></div>
+    <div class="col-sm-4"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 text-center"><input type="text" #genre required></div>
+    <div class="col-sm-4"></div>
+  </div>
+  <br>
+
   
   
    <div class="row">
@@ -109,14 +122,41 @@
     <div class="col-sm-4"></div>
   </div>
   <br>
+
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 text-center"><strong>Chip Number</strong></div>
+    <div class="col-sm-4"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 text-center"><input type="text" #chipnumber required></div>
+    <div class="col-sm-4"></div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 text-center"><strong>Insurance</strong></div>
+    <div class="col-sm-4"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 text-center"><input type="text" #insurance required></div>
+    <div class="col-sm-4"></div>
+  </div>
+  <br>
+
   <br>
   
     
 
    <div class="row">
     <div class="col-sm-12 d-flex justify-content-center">
-    	    <button type="button" (click)="addAnimal(name.value,breed.value,date.value,weight.value,size.value)" class="medButton mx-1">Animal Toev</button>
-            <button type="button" (click)="addAnimal(name.value,breed.value,date.value,weight.value,size.value)" class="medButton mx-1">Animal Toev</button>
+    	    <button type="button" (click)="addAnimal(name.value,genre.value,breed.value,date.value,weight.value,size.value,chipnumber.value,insurance.value)" class="medButton mx-1">Animal Toev</button>
+            <button type="button" (click)="addAnimal(name.value,genre.value,breed.value,date.value,weight.value,size.value,chipnumber.value,insurance.value)" class="medButton mx-1">Animal Toev</button>
     </div>
     
   </div>
