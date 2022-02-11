@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   login() {
 
     // HASH the password of our input form
-    this.encryptPass = CryptoJS.MD5(this.password.trim())
+    this.encryptPass = CryptoJS.MD5(this.password.toString())
     // Fetch the user from our db with the api (create a SEARCH endpoint lumen)
     fetch(this.apiUrl + '/login/' + this.email).then(res => res.json()).then(
       res => {
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('pass', this.encryptPass);
             // alert('login success');
             // redirectTo: 'mainpage'
-            window.location.href="mainpage"
+            this._router.navigate(["mainpage"]);
             //redirect to dashboard (in the ngOninit dashboard component check session else redirect to login)
           } else {
             alert('wrong username or password');

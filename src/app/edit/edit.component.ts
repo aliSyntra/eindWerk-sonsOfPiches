@@ -41,7 +41,7 @@ export class EditComponent implements OnInit {
     console.log("ikieki")
   }
   back(){
-     this._router.navigate(["mainpage"]);
+     this._router.navigate(["animalProfile"]);
   }
 
   logout(){

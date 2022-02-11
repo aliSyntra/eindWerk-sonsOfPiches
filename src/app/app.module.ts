@@ -23,8 +23,8 @@ const routes: Routes = [
   {path: "makeEdit", component: MakeEditComponent},
   {path: "animalProfile", component: AnimalProfileComponent},
   {path: "medication", component: MedicationComponent},
-  {path: "register", component: RegisterComponent}
-
+  {path: "register", component: RegisterComponent},
+  {path: "edit", component: EditComponent}
 ];
 
 @NgModule({

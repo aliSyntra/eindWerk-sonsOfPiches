@@ -44,6 +44,6 @@ export class AnimalProfileComponent implements OnInit {
   }
 
   edit(){
-    window.location.href="makeEdit"
+    window.location.href="edit"
   }
 }
