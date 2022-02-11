@@ -42,12 +42,12 @@ export class MakeEditComponent implements OnInit {
     console.log("ikieki")
   }
   back(){
-    window.location.href="mainpage"
+     this._router.navigate(["mainpage"]);
   }
 
   logout(){
     localStorage.setItem("pass","")
-    window.location.href="login"
+     this._router.navigate(["login"]);
   }
 }
 

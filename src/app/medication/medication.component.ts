@@ -37,17 +37,17 @@ export class MedicationComponent implements OnInit {
   }
   //headerbuttons
   back(){
-    window.location.href="animalProfile"
+    this._router.navigate(["animalProfile"]);
   }
 
   logout(){
-    window.location.href="login"
+    this._router.navigate(["login"]);
     localStorage.setItem("pass","")
   }
   dropdown(){
     console.log("ikieki")
   }
   make(){
-    window.location.href="makeEdit"
+    this._router.navigate(["makeEdit"]);
   }
 }
