@@ -1,0 +1,65 @@
+:host {
+   background: blue;
+}
+.wrapper{
+   width: 100%;
+   position: absolute;
+   margin: 0;
+   background-color:black;
+}
+.container{
+  width: 100%;
+  height: 100%;
+}
+.card{
+   position: relative;
+   margin: auto;
+   display:flex;
+   justify-content: center;
+   background-color:#c7fcf9;
+   width: 100%;
+   height:500px;
+   text-align: center;
+   border-radius:5px;
+}
+
+.name{
+   margin-top: 10px;
+   height:50px;
+   position:relative ;
+   margin:0 auto;
+   border-radius: 5px;
+   width:100%;
+   background-color:lightblue;
+}
+
+.email{
+   height:50px;
+ border-radius: 5px;
+ position: relative;
+ margin:0 auto;
+ width:100%;
+ background-color:lightblue;
+ margin-top:10px
+}
+
+.password{
+   height:50px;
+ border-radius: 5px;
+ width:100%;
+ background-color:lightblue;
+ margin-top: 10px;
+}
+
+.register{
+ height:50px;
+ margin-top:10px;
+ font-size: 30px;
+ border-radius: 5px;
+ width:100%;
+ background-color:lightblue;
+}
+.or{
+   margin-top:10px;
+   font-size: 20px;
+}

@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
   }
@@ -31,13 +31,15 @@ encryptPass:any
     })
     .then(function(res){ 
       console.log(res) 
-      alert('register OK');
-      // melding registration OK, redirect naar dashboard bv....
-      window.location.href = "login"
+      // redirect naar dashboard bv....
+      this._router.navigate(["login"]);
     })
     .catch(function(res){ console.log(res) })
 
 
+  }
+  login(){
+    this._router.navigate(["login"]);
   }
 
 }
