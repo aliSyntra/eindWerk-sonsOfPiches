@@ -50,8 +50,13 @@
         </div>
     </div>
     <!-- div voor de huidige informatie -->
-    <div class="row">
+    <div id="infobox" class="row">
         <div class="col-12 blueBox">
+            <p>Verjaardag: <b>{{useranimal$ ? useranimal$.birthday : ""}}</b></p>
+            <p>Grootte: <b>{{useranimal$ ? useranimal$.size : ""}}cm</b></p>
+            <p>Gewicht: <b>{{useranimal$ ? useranimal$.weight : ""}}kg</b></p>
+            <p>Chipnummer: <b>{{useranimal$ ? useranimal$.chip : ""}}</b></p>
+            <p>Verzekeringsnummer: <b>{{useranimal$ ? useranimal$.insurance : ""}}</b></p>
         </div>
     </div>
     <!--buttons voor aanpassen & of med toevoegen -->

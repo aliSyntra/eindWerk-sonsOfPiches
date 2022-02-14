@@ -32,10 +32,14 @@ main div div button {
 #animalName {
     font-weight: bold;
 }
+#infobox div p {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
 
 .blueBox {
     border-radius:10px;
-    height: 150px;
+    min-height: 150px;
     background-color:lightblue;
     margin-top: 10px;
     border:1px solid gray
