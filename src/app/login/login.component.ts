@@ -15,7 +15,8 @@ export class LoginComponent implements OnInit {
   login() {
 
     // HASH the password of our input form
-    this.encryptPass = CryptoJS.MD5(this.password.toString())
+    this.encryptPass = CryptoJS.MD5(this.password).toString();
+    // MAS: EXTRACT .toString() and chain after CryptoJS.MD5(this.password)...
     // Fetch the user from our db with the api (create a SEARCH endpoint lumen)
     fetch(this.apiUrl + '/login/' + this.email).then(res => res.json()).then(
       res => {
