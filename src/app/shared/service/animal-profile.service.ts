@@ -9,13 +9,20 @@ export class AnimalProfileService {
 
   url:string = "";
   constructor(private http: HttpClient) {
-    this.url = "http://sonsofkittens.be/api/useranimals/";
+    this.url = "http://sonsofkittens.be/api/";
   }
 
   getUseranimal(animalId): Observable<any[]> {
-    return this.http.get<any[]>(this.url + animalId)
+    return this.http.get<any[]>(this.url + "useranimals/" + animalId)
       .pipe(
         tap(result => console.log("Animal fetch: ", result))
+      );
+  }
+
+  getAnimalMed(animalId) :Observable<any[]> {
+    return this.http.get<any[]>(this.url + "medications/animal/" + animalId)
+      .pipe(
+        tap(result => console.log("Medication fetch: ", result))
       );
   }
 }

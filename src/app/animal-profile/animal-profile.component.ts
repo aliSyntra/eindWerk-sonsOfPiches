@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AnimalProfileService } from "../shared/service/animal-profile.service";
+import { ChartDataset, ChartOptions } from 'chart.js';
+/* import { Color, Label } from 'ng2-charts'; */
 
 @Component({
   selector: 'app-animal-profile',
@@ -13,6 +15,7 @@ export class AnimalProfileComponent implements OnInit {
     private _router: Router
     ){}
   useranimal$!: any;
+  animalMed$!: any;
 
   ngOnInit(): void {
     let name = localStorage.getItem('pass');
@@ -22,8 +25,13 @@ export class AnimalProfileComponent implements OnInit {
     //get the animal id from the session storage
     const requestedAnimal:number = parseInt(sessionStorage.getItem("requestedAnimal"));
     
+    //get animal data
     this.animalProfileService.getUseranimal(requestedAnimal)
-   .subscribe(useranimal => this.useranimal$ = useranimal);
+    .subscribe(useranimal => this.useranimal$ = useranimal);
+
+    //get medication data
+    this.animalProfileService.getAnimalMed(requestedAnimal)
+    .subscribe(animalMed => this.animalMed$ = animalMed);
   }
   // header knopjes
   back(){
@@ -46,4 +54,23 @@ export class AnimalProfileComponent implements OnInit {
   edit(){
     window.location.href="edit"
   }
+
+  /* //linechart code
+  public lineChartData: ChartDataset[] = [
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
+  ];
+  public lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  public lineChartOptions: (ChartOptions & { annotation: any }) = {
+    responsive: true,
+  };
+  public lineChartColors: Color[] = [
+    {
+      borderColor: 'black',
+      backgroundColor: 'rgba(255,0,0,0.3)',
+    },
+  ];
+  public lineChartLegend = true;
+  public lineChartType = 'line';
+  public lineChartPlugins = [];
+  //Linechart END */
 }

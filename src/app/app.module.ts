@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { MainpageComponent } from './mainpage/mainpage.component';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { MakeEditComponent } from './make-edit/make-edit.component';
-import { AnimalProfileComponent } from './animal-profile/animal-profile.component';
 import { animate } from '@angular/animations';
-import { MedicationComponent } from './medication/medication.component';
 import { FormsModule } from '@angular/forms';
+import { NgChartsModule } from 'ng2-charts';
+
+import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { EditComponent } from './edit/edit.component';
+import { AnimalProfileComponent } from './animal-profile/animal-profile.component';
+import { LoginComponent } from './login/login.component';
+import { MakeEditComponent } from './make-edit/make-edit.component';
+import { MedicationComponent } from './medication/medication.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
+
 
 
 const routes: Routes = [
@@ -43,7 +45,8 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
