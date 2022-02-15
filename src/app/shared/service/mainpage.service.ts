@@ -9,7 +9,7 @@ import { Useranimal } from "../../shared/model/useranimal.model";
 })
 export class MainpageService {
   //needed variables
-  userId:number = 1; //replace with dynamic id later
+  //userId:number = 1; //replace with dynamic id later
 
   //define base api url
   url:string = "";
@@ -17,8 +17,8 @@ export class MainpageService {
     this.url = "http://sonsofkittens.be/api/thisusersanimals/";
   }
 
-  getUseranimals(): Observable<any[]> {
-    return this.http.get<any[]>(this.url + this.userId)
+  getUseranimals(userId): Observable<any[]> {
+    return this.http.get<any[]>(this.url + userId)
       .pipe(
         tap(result => console.log("Useranimal fetch: ", result))
       );
