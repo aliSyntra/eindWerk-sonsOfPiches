@@ -1,21 +1,13 @@
 header div div button {
     width: 100%;
-    background-color:green;
-}
-header div div button.back {
-    width: 100%;
-    background-color:black;
+    border-radius:10px;
 }
 
-header div div button.notif {
-    width: 100%;
-    background-color:green;
+header hr {
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
-header div div button.logout {
-    width: 100%;
-    background-color:red;
-}
 /* maakt de afbeelding rond */
 main div img {
     width: 64px;
@@ -47,4 +39,7 @@ main div div b {
 /* alert */
 .alertInfo {
     margin-top: -20px;
+}
+button{
+    border-radius: 10px;
 }
