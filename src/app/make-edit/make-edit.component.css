@@ -1,18 +1,10 @@
 header div div button {
     width: 100%;
-    background-color:green;
-}
+    border-radius: 10px;
+ }
 header div div button.back {
     width: 100%;
-    background-color:black;
 }
-
-header div div button.notif {
-    width: 100%;
-    background-color:green;
-}
-
-header div div button.logout {
-    width: 100%;
-    background-color:red;
+button{
+    border-radius: 10px;
 }
