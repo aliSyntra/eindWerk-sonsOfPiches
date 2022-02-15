@@ -10,7 +10,6 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EditComponent implements OnInit {
 id:string;
-size:number;
 currentAnimal: any = {}
   constructor(
     private editserv: EditService,
@@ -29,8 +28,6 @@ currentAnimal: any = {}
         result => this.currentAnimal = result
       );
   }
-
-  
 
   editAnimal(id,name,weight,size,chipnumber,insurance){
     console.log(name,weight,size,chipnumber,insurance);
@@ -52,11 +49,11 @@ currentAnimal: any = {}
     'Content-Type': 'application/json'
     },
     body: JSON.stringify(newEditAnimalObj)
-    }).then(res => res.json())
-   .then(res => console.log(res)) 
+    }).then(res => {
+      res.json();
+      alert('Update complete');
     }
-
-
+      )}
 
   
 
