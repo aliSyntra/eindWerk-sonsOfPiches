@@ -1,8 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, NgModule, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { AnimalProfileService } from "../shared/service/animal-profile.service";
-import { ChartDataset, ChartOptions } from 'chart.js';
-/* import { Color, Label } from 'ng2-charts'; */
 
 @Component({
   selector: 'app-animal-profile',
@@ -62,22 +61,20 @@ export class AnimalProfileComponent implements OnInit {
     this._router.navigate(["mainpage"]);
    }
 
-  /* //linechart code
-  public lineChartData: ChartDataset[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-  ];
-  public lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-  public lineChartOptions: (ChartOptions & { annotation: any }) = {
-    responsive: true,
+  //linechart code
+  type = 'line';
+  data = {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [
+      {
+        label: "My First dataset",
+        data: [65, 59, 80, 81, 56, 55, 40]
+      }
+    ]
   };
-  public lineChartColors: Color[] = [
-    {
-      borderColor: 'black',
-      backgroundColor: 'rgba(255,0,0,0.3)',
-    },
-  ];
-  public lineChartLegend = true;
-  public lineChartType = 'line';
-  public lineChartPlugins = [];
-  //Linechart END */
+  options = {
+    responsive: true,
+    maintainAspectRatio: false
+  };
+  //Linechart END
 }

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { Routes, RouterModule } from '@angular/router';
 import { animate } from '@angular/animations';
 import { FormsModule } from '@angular/forms';
-import { NgChartsModule } from 'ng2-charts';
+import { ChartModule } from 'angular2-chartjs';
 
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
@@ -46,7 +46,7 @@ const routes: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    NgChartsModule
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
