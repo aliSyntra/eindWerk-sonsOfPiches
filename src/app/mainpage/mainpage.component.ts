@@ -23,8 +23,9 @@ export class MainpageComponent implements OnInit {
       this._router.navigate(["login"]);
     }
 
-   this.mainpageService.getUseranimals()
-   .subscribe(useranimal => this.useranimals$ = useranimal);
+    let userId:number = parseInt(sessionStorage.getItem("userId"));
+    this.mainpageService.getUseranimals(userId)
+    .subscribe(useranimal => this.useranimals$ = useranimal);
   }
 
   gotoAnimalProfile(animalId:number) {

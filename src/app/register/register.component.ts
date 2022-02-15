@@ -17,9 +17,8 @@ encryptPass:any
   makeUser(name,email,password) {
     // console.log(name,email,password);
     //MAS: .toString() toevoegen... van wordarray naar string
-    this.encryptPass= CryptoJS.MD5(this.password).toString();
+    this.encryptPass= CryptoJS.MD5(password).toString();
     let newUser = { name: name, email: email, password: this.encryptPass};
-    console.log(this.encryptPass);
     fetch("http://sonsofkittens.be/api/users",
     {
         headers: {
@@ -30,9 +29,9 @@ encryptPass:any
         body: JSON.stringify(newUser)
     })
     .then(function(res){ 
-      console.log(res) 
+      console.log("result: ",res);
       // redirect naar dashboard bv....
-      this._router.navigate(["login"]);
+      window.location.href = "login";
     })
     .catch(function(res){ console.log(res) })
 
