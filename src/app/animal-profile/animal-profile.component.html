@@ -7,18 +7,18 @@
         </div>
     <!-- als je op deze button klikt verschijnen alle notificaties in een dropdown -->
         <div id="notifBTN" class="col-3">
-            <button type="button" (click)="dropdown()" class="btn btn-primary notif"><i class="bi bi-bell"></i></button>
+            <button type="button" (click)="dropdown()" class="btn btn-success notif"><i class="bi bi-bell"></i></button>
         </div>
     <!-- dit is gwn een extra div om de buttons uit elkaar te halen  -->
         <div class="col-3">
         </div>
     <!-- als je op deze button klikt ga je terug naar de login page en word de sessie beeindigd! -->
         <div id="logoutBTN" class="col-3">
-            <button type="button" (click)= "logout()" class="btn btn-primary logout"><i class="bi bi-box-arrow-right"></i></button>
+            <button type="button" (click)="logout()" class="btn btn-danger logout"><i class="bi bi-box-arrow-right"></i></button>
         </div>
     </div>
     <hr />
-  </header>
+</header>
 <!-- einde header! -->
 <!-- container met alles er in -->
 <main class="container px-4">
@@ -38,17 +38,14 @@
     </div>
     <!-- buttons onder de grafiek -->
     <div class="row">
-        <div class="col-3">
+        <div class="col-4">
             <button type="button" class="btn btn-primary" id="gewicht">gewicht</button>
         </div>
-        <div class="col-3">
+        <div class="col-4">
+            <button (click)="chartShowHeight()" type="button" class="btn btn-primary" id="lengte">lengte</button>
+        </div>
+        <div class="col-4">
             <button type="button" class="btn btn-primary" id="bcs">BMI</button>
-        </div>
-        <div class="col-3">
-            <button type="button" class="btn btn-primary" id="lengte">lengte</button>
-        </div>
-        <div class="col-3">
-            <button type="button" class="btn btn-primary" id="voeding">voeding</button>
         </div>
     </div>
     <!-- div voor de huidige informatie -->
@@ -70,7 +67,6 @@
         <div class="col-4">
             <button type="button" (click)="delete()" class="btn btn-primary" id="delete">delete</button>
         </div>
-        
         <div class="col-4">
             <button type="button"(click)="medication()" class="btn btn-primary" id="medicatie">medicatie</button>
         </div>
