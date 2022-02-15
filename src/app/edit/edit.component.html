@@ -19,7 +19,7 @@
   </div>
   <hr />
 </header>
-   
+<input type="hidden" #id value="{{currentAnimal.id}}" required>
   <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-4 text-center"><strong>Please change your pet's details:</strong></div>
@@ -35,7 +35,7 @@
 
   <div class="row">
     <div class="col-sm-4"></div>
-    <div class="col-sm-4 text-center"><input type="text" #name required></div>
+    <div class="col-sm-4 text-center"><input type="text" #name value="{{currentAnimal.name}}" required></div>
     <div class="col-sm-4"></div>
   </div>
   <br>
@@ -50,7 +50,7 @@
   
    <div class="row">
     <div class="col-sm-4"></div>
-    <div class="col-sm-4 text-center"><input type="number" #weight required></div>
+    <div class="col-sm-4 text-center"><input type="number" #weight value="{{currentAnimal.weight}}" required></div>
     <div class="col-sm-4"></div>
   </div>
   <br>
@@ -66,7 +66,7 @@
   
    <div class="row">
     <div class="col-sm-4"></div>
-    <div class="col-sm-4 text-center"><input type="number" #size required></div>
+    <div class="col-sm-4 text-center"><input #size value="{{currentAnimal.size}}" type="number" required></div>
     <div class="col-sm-4"></div>
   </div>
   <br>
@@ -77,9 +77,13 @@
     <div class="col-sm-4"></div>
   </div>
 
+
+
+
+
   <div class="row">
     <div class="col-sm-4"></div>
-    <div class="col-sm-4 text-center"><input type="text" #chipnumber required></div>
+    <div class="col-sm-4 text-center"><input type="text" #chipnumber value="{{currentAnimal.chip}}" required></div>
     <div class="col-sm-4"></div>
   </div>
   <br>
@@ -92,13 +96,14 @@
 
   <div class="row">
     <div class="col-sm-4"></div>
-    <div class="col-sm-4 text-center"><input type="text" #insurance required></div>
+    <div class="col-sm-4 text-center"><input type="text" #insurance value="{{currentAnimal.insurance}}" required></div>
     <div class="col-sm-4"></div>
   </div>
     
   <div class="row">
     <div class="col-sm-12 d-flex justify-content-center">
-    	    <button type="button" (click)="editAnimal(name.value,weight.value,size.value,chipnumber.value,insurance.value)" class="medButton mx-1">Animal Toev</button>
-            <button type="button" (click)="editAnimal(name.value,weight.value,size.value,chipnumber.value,insurance.value)" class="medButton mx-1">Animal Toev</button>
-    </div>  
+ <button type="button" (click)="editAnimal(id.value,name.value,weight.value,size.value,chipnumber.value,insurance.value)" class="medButton mx-1">Animal updaten</button>
+    </div>
+    
   </div>
+  <br>

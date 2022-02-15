@@ -50,12 +50,12 @@ export class AnimalProfileComponent implements OnInit {
     this._router.navigate(["medication"]);
   }
 
-  edit(){
-    window.location.href="edit"
+  edit(id){
+    window.location.href="edit/"+id;
   }
 
-  delete(){
-    const number:number=this.animalId$
+  delete(number){
+    //const number:number=this.animalId$
     console.log(number);
     this.animalProfileService.deleteUseranimal(number).subscribe();
     this._router.navigate(["mainpage"]);

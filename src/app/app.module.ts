@@ -26,7 +26,7 @@ const routes: Routes = [
   {path: "animalProfile", component: AnimalProfileComponent},
   {path: "medication", component: MedicationComponent},
   {path: "register", component: RegisterComponent},
-  {path: "edit", component: EditComponent}
+  {path: "edit/:id", component: EditComponent}
 ];
 
 @NgModule({
