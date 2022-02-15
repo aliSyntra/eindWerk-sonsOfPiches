@@ -16,7 +16,7 @@ export class AnimalProfileComponent implements OnInit {
     ){}
   useranimal$!: any;
   animalMed$!: any;
-
+  animalId$!:any;
   ngOnInit(): void {
     let name = localStorage.getItem('pass');
     if (!name) {
@@ -24,7 +24,7 @@ export class AnimalProfileComponent implements OnInit {
     }
     //get the animal id from the session storage
     const requestedAnimal:number = parseInt(sessionStorage.getItem("requestedAnimal"));
-    
+    this.animalId$=requestedAnimal;
     //get animal data
     this.animalProfileService.getUseranimal(requestedAnimal)
     .subscribe(useranimal => this.useranimal$ = useranimal);
@@ -35,12 +35,12 @@ export class AnimalProfileComponent implements OnInit {
   }
   // header knopjes
   back(){
-    window.location.href="mainpage"
+   this._router.navigate(["mainpage"]);
   }
 
   logout(){
     localStorage.setItem("pass","")
-    window.location.href="login"
+    this._router.navigate(["login"]);
   }
 
   dropdown(){
@@ -48,12 +48,19 @@ export class AnimalProfileComponent implements OnInit {
   }
 
   medication(){
-    window.location.href="medication"
+    this._router.navigate(["medication"]);
   }
 
   edit(){
     window.location.href="edit"
   }
+
+  delete(){
+    const number:number=this.animalId$
+    console.log(number);
+    this.animalProfileService.deleteUseranimal(number).subscribe();
+    this._router.navigate(["mainpage"]);
+   }
 
   /* //linechart code
   public lineChartData: ChartDataset[] = [

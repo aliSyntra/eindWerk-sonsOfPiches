@@ -44,3 +44,7 @@ main div div button {
     margin-top: 10px;
     border:1px solid gray
 }
+
+#delete{
+    background-color: red;
+}

@@ -25,4 +25,10 @@ export class AnimalProfileService {
         tap(result => console.log("Medication fetch: ", result))
       );
   }
+  deleteUseranimal(animalId): Observable<any[]> {
+    return this.http.delete<any[]>(this.url + "useranimals/" + animalId)
+      .pipe(
+      
+      );
+  }
 }

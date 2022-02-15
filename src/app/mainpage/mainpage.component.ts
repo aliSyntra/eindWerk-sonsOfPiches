@@ -49,5 +49,4 @@ export class MainpageComponent implements OnInit {
   make(){
     this._router.navigate(["makeEdit"]);
   }
-
 }
