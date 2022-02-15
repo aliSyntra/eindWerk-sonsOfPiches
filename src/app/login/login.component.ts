@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
             localStorage.setItem("userId", res[0].id);
             // alert('login success');
             // redirectTo: 'mainpage'
+            sessionStorage.setItem("userId", res[0].id);
             this._router.navigate(["mainpage"]);
             //redirect to dashboard (in the ngOninit dashboard component check session else redirect to login)
           } else {

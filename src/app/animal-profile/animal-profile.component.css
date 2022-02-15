@@ -1,9 +1,12 @@
 header div div button {
     width: 100%;
+    border-radius:10px;
 }
+
 header hr {
     border: 1px solid black;
 }
+
 main div div button {
     width: 100%;
     margin-top: 5px;
@@ -28,4 +31,8 @@ main div div button {
     background-color:lightblue;
     margin-top: 10px;
     border:1px solid gray
+}
+    
+button{
+    border-radius: 10px;
 }

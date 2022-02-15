@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { EditService } from '../shared/service/edit.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-edit',
@@ -8,19 +9,27 @@ import { EditService } from '../shared/service/edit.service';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
-
+id:string;
+currentAnimal: any = {}
   constructor(
     private editserv: EditService,
-    private _router: Router
+    private _router: Router,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     let name = localStorage.getItem('pass');
   if (!name) {
     this._router.navigate(["login"]);
-  }}
+  }
+    this.id = this.route.snapshot.paramMap.get('id');
+      console.log('id of current animal'+this.id);
+      fetch('http://sonsofkittens.be/api/useranimals/'+this.id).then((data) => data.json()).then(
+        result => this.currentAnimal = result
+      );
+  }
 
-  editAnimal(name,weight,size,chipnumber,insurance){
+  editAnimal(id,name,weight,size,chipnumber,insurance){
     console.log(name,weight,size,chipnumber,insurance);
     // niew object maken vanm mijn input
     let newEditAnimalObj = {
@@ -31,10 +40,22 @@ export class EditComponent implements OnInit {
       insurance: insurance
     }
     // check
-    console.log(newEditAnimalObj);
-    // stuur mijn object door naar mijn service voor verwerking API
-    this.editserv.editAnimal(newEditAnimalObj);
-  }
+    console.log(newEditAnimalObj,id);
+    
+    fetch('http://sonsofkittens.be/api/useranimals/'+id, {
+    method: 'PUT',
+    headers: {
+    'Accept': 'application/json, text/plain, */*',
+    'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newEditAnimalObj)
+    }).then(res => {
+      res.json();
+      alert('Update complete');
+    }
+      )}
+
+  
 
   //header buttons
   dropdown(){

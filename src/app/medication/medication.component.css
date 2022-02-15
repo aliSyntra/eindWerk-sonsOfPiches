@@ -43,3 +43,6 @@ header .logo{
   position: relative
 
 }
+button{
+  border-radius: 10px;
+}

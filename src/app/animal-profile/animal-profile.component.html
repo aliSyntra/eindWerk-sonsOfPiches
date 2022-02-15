@@ -18,7 +18,7 @@
         </div>
     </div>
     <hr />
-  </header>
+</header>
 <!-- einde header! -->
 <!-- container met alles er in -->
 <main class="container px-4">
@@ -62,10 +62,10 @@
     <!--buttons voor aanpassen & of med toevoegen -->
     <div class="row">
         <div class="col-4">
-            <button type="button" (click)="edit()" class="btn btn-primary" id="aanpassen">aanpassen</button>
+            <button type="button" (click)="edit(useranimal$.id)" class="btn btn-primary" id="aanpassen">aanpassen</button>
         </div>
         <div class="col-4">
-            <button type="button" (click)="delete()" class="btn btn-danger" id="delete">delete</button>
+            <button type="button" (click)="delete(useranimal$.id)" class="btn btn-danger" id="delete">delete</button>
         </div>
         <div class="col-4">
             <button type="button"(click)="medication()" class="btn btn-primary" id="medicatie">medicatie</button>

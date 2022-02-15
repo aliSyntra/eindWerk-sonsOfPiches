@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, NgModule, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AnimalProfileService } from "../shared/service/animal-profile.service";
@@ -25,7 +25,6 @@ export class AnimalProfileComponent implements OnInit {
     //get the animal id from the session storage
     const requestedAnimal:number = parseInt(sessionStorage.getItem("requestedAnimal"));
     this.animalId$=requestedAnimal;
-
     //get animal data
     this.animalProfileService.getUseranimal(requestedAnimal)
     .subscribe(useranimal => this.useranimal$ = useranimal);
@@ -53,12 +52,13 @@ export class AnimalProfileComponent implements OnInit {
     this._router.navigate(["medication"]);
   }
 
-  edit(){
-    window.location.href="edit"
+  edit(id){
+    window.location.href="edit/"+id;
   }
+  //header knopjes END
 
-  delete(){
-    const number:number=this.animalId$
+  delete(number){
+    //const number:number=this.animalId$
     console.log(number);
     this.animalProfileService.deleteUseranimal(number).subscribe();
     this._router.navigate(["mainpage"]);
@@ -70,7 +70,7 @@ export class AnimalProfileComponent implements OnInit {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
-        label: "My First dataset",
+        label: "Gewicht",
         data: [25, 26, 26, 27, 26, 30, 31]
       }
     ]

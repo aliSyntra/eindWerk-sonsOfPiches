@@ -7,4 +7,6 @@ header hr {
     border-radius: 5px;
 }
 
-
+button{
+    border-radius: 10px;
+}
