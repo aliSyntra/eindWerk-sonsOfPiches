@@ -5,6 +5,28 @@ header div div button {
 header div div button.back {
     width: 100%;
 }
+
+
+header div div button.logout {
+    width: 100%;
+    background-color:red;
+}
+
+img.medButton.mx-4 {
+    border-radius: 10px!important;
+    cursor: pointer;
+ }
+ 
+ img.medButton.mx-1 {
+    border-radius: 10px!important;
+    cursor: pointer;
+ }
+
+ input#genre {
+    pointer-events: none;
+    background-color: #efefef;
+
 button{
     border-radius: 10px;
+
 }

@@ -8,7 +8,7 @@
 }
 /* login wat bovenaan staat */
 #login{
-    font-family: 'Kaushan Script', cursive;
+    /* font-family: 'Kaushan Script', cursive; */
     font-size:50px;
     margin-left:-25px;
 }
@@ -39,4 +39,37 @@
     width: 100%;
     border-radius: 15px;
     font-family: cursive;
+}
+
+
+/* CUSTOM MAS CSS */
+
+div#loginForm {
+    border: 1px;
+    border-color: #b6262e;
+    border-style: solid;
+    background-color: #bea7b5ad;
+    box-shadow: chocolate;
+    margin-top: 74px!important;
+    border-radius: 12px;
+}
+
+button#loginButton {
+    background-color: #7b2430;
+    border-color: #ffffff80;
+}
+
+button#signupButton {
+    background-color: #b92f37;
+    border-color: #ffffff66;
+}
+
+body {
+    background-image: url('https://images.pexels.com/photos/1938123')!important;
+    background-position: fixed!important;
+}
+
+div#login {
+    font-size: 50px;
+    font-weight: 100;
 }

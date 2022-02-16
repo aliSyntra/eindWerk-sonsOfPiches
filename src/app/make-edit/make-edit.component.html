@@ -22,8 +22,8 @@
 <br>
     <div class="row">
     	<div class="col-sm-12 d-flex justify-content-center">
-    	    <img src="../../assets/images/cat.png" class="medButton mx-4" alt="Avatar" width="100" height="100">
-            <img src="../../assets/images/dog.png" class="medButton mx-1" alt="Avatar" width="100" height="100">
+    	    <img src="../../assets/images/cat.png" (click)="selectGenre(1)" class="medButton mx-4" alt="Avatar" width="100" height="100">
+            <img src="../../assets/images/dog.png" (click)="selectGenre(2)" class="medButton mx-1" alt="Avatar" width="100" height="100">
     	</div>
    </div>
   
@@ -48,7 +48,7 @@
 
   <div class="row">
     <div class="col-sm-4"></div>
-    <div class="col-sm-4 text-center"><input type="text" #genre required></div>
+    <div class="col-sm-4 text-center"><input type="text" [(ngModel)]="genreType" #genre id="genre" required></div>
     <div class="col-sm-4"></div>
   </div>
   <br>
@@ -63,7 +63,7 @@
 
    <div class="row">
     <div class="col-sm-4"></div>
-    <div class="col-sm-4 text-center"><input type="text" #breed required></div>
+    <div class="col-sm-4 text-center"><input type="text" #breed required disable></div>
     <div class="col-sm-4"></div>
   </div>
   <br>
