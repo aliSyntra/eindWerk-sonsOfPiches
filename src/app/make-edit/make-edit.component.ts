@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 
 export class MakeEditComponent implements OnInit {
 id:string;
-
+genreType:string;
   constructor(
     private makeEditserv: MakeEditService,
     private _router: Router,
@@ -24,7 +24,18 @@ id:string;
       this._router.navigate(["login"]);
     }
 
-  
+  }
+
+  selectGenre(genre) {
+    if (genre == 1) {
+      this.genreType = 'Cat';
+      // hier moeten we ook de dropdown binnenhalen... met alle katten (dataset)
+      // fetch een endpoint met type cats
+    } else {
+      this.genreType = 'Dog';
+       // hier moeten we ook de dropdown binnenhalen... met alle honden (dataset)
+       // fet een endpoint met type dogs
+    }
   }
 
     addAnimal(name,genre,breed,date,weight,size,chipnumber,insurance) {

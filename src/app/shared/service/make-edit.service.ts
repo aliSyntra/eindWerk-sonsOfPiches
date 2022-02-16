@@ -4,6 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MakeEditService {
+
+
   addAnimal(newMakeAnimalObj) {
 
     const requestOptions = {
@@ -16,6 +18,8 @@ export class MakeEditService {
     .then(response => response.json())
 
   }
+
+ 
    
 
   constructor() { }
