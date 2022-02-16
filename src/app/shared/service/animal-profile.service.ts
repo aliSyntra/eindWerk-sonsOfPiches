@@ -28,7 +28,6 @@ export class AnimalProfileService {
   deleteUseranimal(animalId): Observable<any[]> {
     return this.http.delete<any[]>(this.url + "useranimals/" + animalId)
       .pipe(
-      
-      );
+    );
   }
 }

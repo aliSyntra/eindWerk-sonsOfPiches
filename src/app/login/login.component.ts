@@ -28,6 +28,8 @@ export class LoginComponent implements OnInit {
           if (res[0].password == this.encryptPass) {
             // yay, it does.. true, so initiate authentication with sessionStorage
             localStorage.setItem('pass', this.encryptPass);
+            const stringId:string = res[0].id.toString();
+            localStorage.setItem("userId", res[0].id);
             // alert('login success');
             // redirectTo: 'mainpage'
             sessionStorage.setItem("userId", res[0].id);

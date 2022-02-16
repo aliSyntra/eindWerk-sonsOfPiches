@@ -15,7 +15,8 @@ export class AnimalProfileComponent implements OnInit {
     ){}
   useranimal$!: any;
   animalMed$!: any;
-  animalId$!:any;
+  animalId$!: any;
+
   ngOnInit(): void {
     let name = localStorage.getItem('pass');
     if (!name) {
@@ -32,9 +33,10 @@ export class AnimalProfileComponent implements OnInit {
     this.animalProfileService.getAnimalMed(requestedAnimal)
     .subscribe(animalMed => this.animalMed$ = animalMed);
   }
-  // header knopjes
+
+  //header knopjes
   back(){
-   this._router.navigate(["mainpage"]);
+    this._router.navigate(["mainpage"]);
   }
 
   logout(){
@@ -53,6 +55,7 @@ export class AnimalProfileComponent implements OnInit {
   edit(id){
     window.location.href="edit/"+id;
   }
+  //header knopjes END
 
   delete(number){
     //const number:number=this.animalId$
@@ -67,8 +70,8 @@ export class AnimalProfileComponent implements OnInit {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
-        label: "My First dataset",
-        data: [65, 59, 80, 81, 56, 55, 40]
+        label: "Gewicht",
+        data: [25, 26, 26, 27, 26, 30, 31]
       }
     ]
   };
@@ -76,5 +79,9 @@ export class AnimalProfileComponent implements OnInit {
     responsive: true,
     maintainAspectRatio: false
   };
+
+  chartShowHeight() {
+    this.data.datasets[0].data = [60, 61, 61, 62, 64, 68, 70];
+  }
   //Linechart END
 }

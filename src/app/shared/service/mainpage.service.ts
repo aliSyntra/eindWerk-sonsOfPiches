@@ -17,7 +17,7 @@ export class MainpageService {
     this.url = "http://sonsofkittens.be/api/thisusersanimals/";
   }
 
-  getUseranimals(userId:number): Observable<any[]> {
+  getUseranimals(userId): Observable<any[]> {
     return this.http.get<any[]>(this.url + userId)
       .pipe(
         tap(result => console.log("Useranimal fetch: ", result))

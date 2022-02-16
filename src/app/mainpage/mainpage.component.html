@@ -3,18 +3,18 @@
     <div class="row">
     <!-- deze button gaat terug naar de vorgige pagina  -->
         <div id="backBTN" class="col-3">
-            <button type= "button"(click)="back()" class="btn btn-primary back"><i class="bi bi-arrow-left"></i></button>
+            <button type= "button"(click)="back()" class="btn btn-dark"><i class="bi bi-arrow-left"></i></button>
         </div>
     <!-- als je op deze button klikt verschijnen alle notificaties in een dropdown -->
         <div id="notifBTN" class="col-3">
-            <button type="button" (click)="dropdown()" class="btn btn-primary notif"><i class="bi bi-bell"></i></button>
+            <button type="button" (click)="dropdown()" class="btn btn-success"><i class="bi bi-bell"></i></button>
         </div>
     <!-- dit is gwn een extra div om de buttons uit elkaar te halen  -->
         <div class="col-3">
         </div>
     <!-- als je op deze button klikt ga je terug naar de login page en word de sessie beeindigd! -->
         <div id="logoutBTN" class="col-3">
-            <button type="button" (click)= "logout()" class="btn btn-primary logout"><i class="bi bi-box-arrow-right"></i></button>
+            <button type="button" (click)= "logout()" class="btn btn-danger"><i class="bi bi-box-arrow-right"></i></button>
         </div>
     </div>
     <hr />
@@ -33,45 +33,6 @@
         <div class="col-1"></div>
     </div>
     <hr/>
-    <!-- container steven -->
-    <!-- <div class="row mt-3">
-        <div class="col-1"></div>
-        <div class="col-1 petAlert">
-            !
-        </div>
-        <div class="col-3">
-            <img src="pictures/cat.png"/>
-        </div>
-        <div class="col-6">
-            <p class="petName">Steve</p>
-            <p class="alertInfo">Medicatie nieren</p>
-        </div>
-        <div class="col-1"></div>
-    </div>
-    <hr/> -->
-    <!-- container luna -->
-    <!-- <div class="row mt-3">
-        <div class="col-1"></div>
-        <div class="col-3">
-            <img src="pictures/dog.png"/>
-        </div>
-        <div class="col-7">
-            <p class="petName mt-3">Luna</p>
-        </div>
-        <div class="col-1"></div>
-    </div>
-    <hr/> -->
-    <!-- container astolfo -->
-    <!-- <div class="row mt-3">
-        <div class="col-1"></div>
-        <div class="col-3">
-            <img src="pictures/cat2.png"/>
-        </div>
-        <div class="col-7">
-            <p class="petName mt-3">Astolfo</p>
-        </div>
-        <div class="col-1"></div>
-    </div> -->
 
     <div *ngFor="let useranimal of useranimals$" (click)="gotoAnimalProfile(useranimal.id)" class="row mt-3">
         <!--spacer div-->

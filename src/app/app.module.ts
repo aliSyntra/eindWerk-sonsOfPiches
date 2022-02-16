@@ -38,7 +38,7 @@ const routes: Routes = [
     AnimalProfileComponent,
     MedicationComponent,
     RegisterComponent,
-    EditComponent
+    EditComponent,
   ],
   imports: [
     FormsModule,

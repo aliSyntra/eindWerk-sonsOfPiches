@@ -11,6 +11,7 @@ import { Useranimal } from "../../app/shared/model/useranimal.model";
 })
 export class MainpageComponent implements OnInit {
   useranimals$!: any[];
+  userId:number = parseInt(localStorage.getItem("userId"))
 
   constructor(
     private mainpageService: MainpageService,
@@ -23,8 +24,8 @@ export class MainpageComponent implements OnInit {
       this._router.navigate(["login"]);
     }
 
-    let userId:number = parseInt(sessionStorage.getItem("userId"));
-    this.mainpageService.getUseranimals(userId)
+    //get users animals
+    this.mainpageService.getUseranimals(this.userId)
     .subscribe(useranimal => this.useranimals$ = useranimal);
   }
 

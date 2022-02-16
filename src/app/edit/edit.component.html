@@ -1,20 +1,20 @@
 <!-- header -->
- <header class="container mt-3">
+<header class="container mt-3">
   <div class="row">
   <!-- deze button gaat terug naar de vorgige pagina  -->
       <div id="backBTN" class="col-3">
-          <button type= "button"(click)="back()" class="btn btn-primary back"><i class="bi bi-arrow-left"></i></button>
+          <button type= "button"(click)="back()" class="btn btn-dark"><i class="bi bi-arrow-left"></i></button>
       </div>
   <!-- als je op deze button klikt verschijnen alle notificaties in een dropdown -->
       <div id="notifBTN" class="col-3">
-          <button type="button" (click)="dropdown()" class="btn btn-primary notif"><i class="bi bi-bell"></i></button>
+          <button type="button" (click)="dropdown()" class="btn btn-success"><i class="bi bi-bell"></i></button>
       </div>
   <!-- dit is gwn een extra div om de buttons uit elkaar te halen  -->
       <div class="col-3">
       </div>
   <!-- als je op deze button klikt ga je terug naar de login page en word de sessie beeindigd! -->
       <div id="logoutBTN" class="col-3">
-          <button type="button" (click)= "logout()" class="btn btn-primary logout"><i class="bi bi-box-arrow-right"></i></button>
+          <button type="button" (click)= "logout()" class="btn btn-danger"><i class="bi bi-box-arrow-right"></i></button>
       </div>
   </div>
   <hr />
@@ -99,13 +99,8 @@
     <div class="col-sm-4 text-center"><input type="text" #insurance value="{{currentAnimal.insurance}}" required></div>
     <div class="col-sm-4"></div>
   </div>
-  <br>
-
-  <br>
-  
     
-
-   <div class="row">
+  <div class="row">
     <div class="col-sm-12 d-flex justify-content-center">
  <button type="button" (click)="editAnimal(id.value,name.value,weight.value,size.value,chipnumber.value,insurance.value)" class="medButton mx-1">Animal updaten</button>
     </div>
