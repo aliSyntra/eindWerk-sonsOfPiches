@@ -1,3 +1,4 @@
+<img id="background-image" src="https://www.myhappypet.be/sites/bemhp3/files/adobestock_60709984.jpeg"/>
 <!-- header -->
 <header class="container mt-3">
     <div class="row">
@@ -17,22 +18,14 @@
             <button type="button" (click)= "logout()" class="btn btn-danger"><i class="bi bi-box-arrow-right"></i></button>
         </div>
     </div>
-    <hr />
 </header>
 <!-- einde header! -->
 <!-- container met alles er in -->
 <main class="container px-4">
-    <!-- hier komt de naam van het desbetreffende dier dmv js  -->
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4">
-            <h1 id="animalName" class="text-center"> {{useranimal$ ? useranimal$.name :  "name"}} </h1>
-        </div>
-        <div class="col-4"></div>
-    </div>
-    <!-- div voor de grafiek  -->
+    <!-- div voor de grafiek en naam-->
     <div class="row">
         <div class="col-12 blueBox">
+            <h1 id="animalName" class="text-center"> {{useranimal$ ? useranimal$.name :  "name"}} </h1>
             <chart [type]="type" [data]="data" [options]="options"></chart>
         </div>
     </div>

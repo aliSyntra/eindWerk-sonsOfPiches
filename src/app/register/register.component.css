@@ -75,13 +75,17 @@ div#loginForm {
    width:fit-content;
 }
 
-
-body {
-   background-image: url('https://www.google.com/search?q=pets+bg+img+&tbm=isch&ved=2ahUKEwjFv92Y9Yb2AhXRyKQKHRUFBqIQ2-cCegQIABAA&oq=pets+bg+img+&gs_lcp=CgNpbWcQAzoHCCMQ7wMQJzoECAAQQzoFCAAQgAQ6CAgAEIAEELEDOggIABCxAxCDAToLCAAQgAQQsQMQgwE6BAgAEB46BAgAEBM6CAgAEAUQHhATOggIABAIEB4QEzoGCAAQCBAeUK8GWLggYOYgaAFwAHgAgAFOiAHZBpIBAjEzmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=RFcOYsWNGNGRkwWVipiQCg&bih=881&biw=1745#imgrc=uJumvGDpwkq9hM')!important;
-   background-position: fixed!important;
-}
-
 div#login {
    font-size: 50px;
    font-weight: 100;
+}
+
+#background-image {
+   position:absolute;
+   left:0px;
+   top:0px;
+   width: 100%;
+   height: 100%;
+   z-index:-1;
+   object-fit: cover;
 }

@@ -12,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class MakeEditComponent implements OnInit {
 id:string;
 genreType:string;
+animalType: number;
   constructor(
     private makeEditserv: MakeEditService,
     private _router: Router,
@@ -28,11 +29,13 @@ genreType:string;
 
   selectGenre(genre) {
     if (genre == 1) {
-      this.genreType = 'Cat';
+      this.genreType = 'Kat';
+      this.animalType = 2;
       // hier moeten we ook de dropdown binnenhalen... met alle katten (dataset)
       // fetch een endpoint met type cats
     } else {
-      this.genreType = 'Dog';
+      this.genreType = 'Hond';
+      this.animalType = 1;
        // hier moeten we ook de dropdown binnenhalen... met alle honden (dataset)
        // fet een endpoint met type dogs
     }
@@ -42,7 +45,7 @@ genreType:string;
       console.log(name,genre,breed,date,weight,size,chipnumber,insurance);
       // niew object maken vanm mijn input
         let newMakeAnimalObj = {
-          animal_id: 1,
+          animal_id: this.animalType,
           name: name,
           gender: 'male',
           birthday: date,
@@ -59,6 +62,7 @@ genreType:string;
       console.log(newMakeAnimalObj);
       // stuur mijn object door naar mijn service voor verwerking API
       this.makeEditserv.addAnimal(newMakeAnimalObj);
+      this._router.navigate(["mainpage"]);
   }
   //header buttons
   back(){

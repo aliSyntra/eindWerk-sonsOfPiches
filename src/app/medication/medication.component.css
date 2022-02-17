@@ -8,10 +8,6 @@ h2 {text-align: center;}
 /* input velden in het midden */
 form {text-align: center;}
 
-img {
-border-radius: 40px;
-padding: 10px;
-}
 /* medicatie toevoegen */
 .medButton{
  background-color: #0275d8;
@@ -27,6 +23,17 @@ padding: 10px;
    border-radius: 10px;
 
 }
+main {
+  border: 1px;
+  border-color: black;
+  border-style: solid;
+  background-color: #ffffffad;
+  box-shadow: chocolate;
+  margin-top: 30px!important;
+  border-radius: 12px;
+  padding-top: 10px;
+}
+
 
 header .logo{
   position: relative
@@ -45,4 +52,20 @@ header .logo{
 }
 button{
   border-radius: 10px;
+}
+
+#background-image {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width: 100%;
+  height: 100%;
+  z-index:-1;
+  object-fit: cover;
+}
+
+.btn-primary {
+  background-color: #6e5846;
+  border-color: #7b8b4e;
+  width: 100%;
 }

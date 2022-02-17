@@ -22,8 +22,8 @@ export class AnimalProfileComponent implements OnInit {
   animalId$!: any;
   animalBMI$!: any;
   
-  animalChartWeight = [25, 26, 26, 27, 26, 30, 31];
-  animalChartHeight = [60, 61, 61, 62, 64, 68, 70];
+  animalChartHeight = [25, 26, 26, 27, 26, 30, 31];
+  animalChartWeight = [60, 61, 61, 62, 64, 68, 70];
   animalChartBMI = [];
 
   ngOnInit(): void {
@@ -77,7 +77,7 @@ export class AnimalProfileComponent implements OnInit {
   //linechart code
   type = 'line';
   data = {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    labels: ["Augustus", "September", "Oktober", "November", "December", "Januari", "Februari"],
     datasets: [
       {
         label: "Gewicht (kg)",

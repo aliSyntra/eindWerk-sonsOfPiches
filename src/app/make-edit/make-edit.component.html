@@ -1,3 +1,4 @@
+<img id="background-image" src="https://www.myhappypet.be/sites/bemhp3/files/190502.jpeg"/>
 <!-- header -->
 <header class="container mt-3">
   <div class="row">
@@ -17,9 +18,8 @@
           <button type="button" (click)= "logout()" class="btn btn-danger"><i class="bi bi-box-arrow-right"></i></button>
       </div>
   </div>
-  <hr />
 </header>
-<br>
+<main class="container">
     <div class="row">
     	<div class="col-sm-12 d-flex justify-content-center">
     	    <img src="../../assets/images/cat.png" (click)="selectGenre(1)" class="medButton mx-4" alt="Avatar" width="100" height="100">
@@ -42,7 +42,7 @@
 
   <div class="row">
     <div class="col-sm-4"></div>
-    <div class="col-sm-4 text-center"><strong>Genre</strong></div>
+    <div class="col-sm-4 text-center"><strong>Kat/Hond</strong></div>
     <div class="col-sm-4"></div>
   </div>
 
@@ -84,7 +84,7 @@
   
    <div class="row">
     <div class="col-sm-4"></div>
-     <div class="col-sm-4 text-center"><strong>Weight</strong></div>
+     <div class="col-sm-4 text-center"><strong>Weight (kg)</strong></div>
      <div class="col-sm-4"></div>
   </div>
   
@@ -100,7 +100,7 @@
   
    <div class="row">
     <div class="col-sm-4"></div>
-     <div class="col-sm-4 text-center"><strong>Size</strong></div>
+     <div class="col-sm-4 text-center"><strong>Size (cm)</strong></div>
      <div class="col-sm-4"></div>
   </div>
   
@@ -137,16 +137,12 @@
     <div class="col-sm-4"></div>
   </div>
   <br>
-
-  <br>
-  
-    
-
-   <div class="row">
-    <div class="col-sm-12 d-flex justify-content-center">
-    	    <button type="button" (click)="addAnimal(name.value,genre.value,breed.value,date.value,weight.value,size.value,chipnumber.value,insurance.value)" class="medButton mx-1">Animal Toev</button>
-            <button type="button" (click)="addAnimal(name.value,genre.value,breed.value,date.value,weight.value,size.value,chipnumber.value,insurance.value)" class="medButton mx-1">Animal Toev</button>
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+    	  <button type="button" (click)="addAnimal(name.value,genre.value,breed.value,date.value,weight.value,size.value,chipnumber.value,insurance.value)" class="btn btn-primary">Animal Toev</button>
     </div>
-    
+    <div class="col-4"></div>
   </div>
+</main>
   <br>

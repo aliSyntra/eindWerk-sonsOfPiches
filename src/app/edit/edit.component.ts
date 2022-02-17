@@ -51,7 +51,7 @@ currentAnimal: any = {}
     body: JSON.stringify(newEditAnimalObj)
     }).then(res => {
       res.json();
-      alert('Update complete');
+      this._router.navigate(["animalProfile"]);
     }
       )}
       
