@@ -1,55 +1,53 @@
-<div class="wrapper">
-<div class="container">
-    <div class="container mt-12" class="card" >
-        <!-- input veld name -->
-        <div class="row -md">
-            <div class="col-1"></div>
-            <div class="col-10">
-                <input type="text" #name placeholder="naam" class="name">
-            </div>
-            <div class="col-1"></div>
-        </div>
-      <!-- input veld  email -->
-     <div class="row -md">
-        <div class="col-1"></div>
-        <div class="col-10">
-            <input type="text" #email placeholder="email" class="email">
-        </div>
-        <div class="col-1"></div>
-     </div>
-     <!-- input veld password -->
-     <div class="row -md">
-        <div class="col-1"></div>
-        <div class="col-10">
-            <input type="password" #password placeholder="kies uw wachtwoord" class="password">
-        </div>
-        <div class="col-1"></div>
-     </div>
-     <!-- button register -->
-     <div class="row -md">
-        <div class="col-1"></div>
-        <div class="col-10">
-            <button (click)="makeUser(name.value,email.value,password.value)" class="register">signup</button>
-        </div>
-        <div class="col-1"></div>
-     </div>
-     <!-- p or login if you already have an acc -->
-     <div class="row -md">
-        <div class="col-1"></div>
-        <div class="col-10" class="or">
-        or
-        </div>
-        <div class="col-1"></div>
-     </div>
-     <!-- buton to login if you have an acc -->
-     <div class="row -md">
-        <div class="col-1"></div>
-        <div class="col-10">
-            <button (click)="login()" class="login">login</button>
-           
-        </div>
-        <div class="col-1"></div>
-     </div>
+<div class="container mt-3 p-5" id="loginForm">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <img id ="logo" src="../../assets/images/logo.png"/>
+      </div>
+      <div class="col-3"></div>
     </div>
-</div>
-</div>
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4" id="login">signup</div>
+      <div class="col-4"></div>
+    </div>
+    <!-- name -->
+    <div class="row">
+        <div class=col-12>
+          <div class="label">name </div>
+          <input type="text" class="forms"#name placeholder="naam" class="name">
+        </div>
+      </div>
+    <!-- email form -->
+    <div class="row">
+      <div class=col-12>
+        <div class="label">Email address </div>
+        <input type="text" #email placeholder="email" class="email">
+      </div>
+    </div>
+    <!-- password form -->
+    <div class="row">
+      <div class="col-12">
+        <div class="label">password</div>
+      
+        <input type="password" #password placeholder="kies uw wachtwoord" class="password">
+
+      </div>
+    </div>
+    <!-- login button-->
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <button (click)="login()" id="signupButton" class="btn btn-primary">signup</button>
+      </div>
+      <div class="col-2"></div>
+    </div>
+    <!-- login-->
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <button (click)="login()" id="loginButton" class="btn btn-primary">login</button>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </div>

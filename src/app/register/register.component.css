@@ -1,75 +1,87 @@
-.wrapper{
 
-   width: 100%;
-   position: absolute;
-   margin:0 0 0 0;
-}
+/* in deze container zit alles */
 .container{
-   margin-top:200px;
-  width: 100%;
-  height: 100%;
+   width:350px;
 }
-.card{
-   position: relative;
-   margin: auto;
-   display:flex;
-   justify-content: center;
-   background-color:#c7fcf9;
-   width: 70%;
-   height:500px;
-   text-align: center;
-   border-radius:10px;
+#logo {
+   width: 100%;
+}
+/* login wat bovenaan staat */
+#login{
+   /* font-family: 'Kaushan Script', cursive; */
+   font-size:50px;
+   margin-left:-25px;
 }
 
+/* inputveld nmae */
 .name{
-   margin-top: 10px;
-   height:50px;
-   position:relative ;
-   margin:0 auto;
-   border-radius:10px;
    width:100%;
-   background-color:lightblue;
-   text-align: center;
+   height:35px;
 }
-
+/* inputveld email */
 .email{
- height:50px;
- border-radius: 10px;
- position: relative;
- margin:0 auto;
- width:100%;
- background-color:lightblue;
- margin-top:10px;
-text-align: center;
+   width:100%;
+   height:35px;
 }
-
+/* inputveld password */
 .password{
- height:50px;
- border-radius: 10px;
- width:100%;
- background-color:lightblue;
- margin-top: 10px;
-text-align: center;
+   width:100%;
+   height:35px;
 }
-
-.register{
- height:50px;
- margin-top:10px;
- font-size: 30px;
- border-radius: 10px;
- width:70%;
- background-color:#0275d8;
+/* email adres and password */
+.label{
+   font-size:20px;
+   margin-left:17px;
 }
-.or{ 
-   margin-top:8px;
-   font-size: 20px;
-}
-.login{
-   height:50px;
+/* inputfields  */
+.forms-controller{
    margin-top:10px;
-   font-size: 30px;
-   border-radius:10px;
-   width:70%;
-   background-color:#0275d8;
+   margin-left:27px;
+   width:300px;
+   text-align:center;
 }
 
+/* signup button  */
+#signupButton{
+   background-color: #7b2430;
+   border-color: #ffffff80;
+   margin-top: 10px;
+   font-size: 20px;
+   width: 100%;
+   border-radius: 15px;
+   font-family: cursive;
+}
+
+/* login button  */
+#loginButton{
+   background-color: #b92f37;
+   border-color: #ffffff66;
+   margin-top: 10px;
+   font-size: 20px;
+   width: 100%;
+   border-radius: 15px;
+   font-family: cursive;
+}
+
+
+div#loginForm {
+   border: 1px;
+   border-color: #b6262e;
+   border-style: solid;
+   background-color: #bea7b5ad;
+   box-shadow: chocolate;
+   margin-top: 74px!important;
+   border-radius: 12px;
+   width:fit-content;
+}
+
+
+body {
+   background-image: url('https://www.google.com/search?q=pets+bg+img+&tbm=isch&ved=2ahUKEwjFv92Y9Yb2AhXRyKQKHRUFBqIQ2-cCegQIABAA&oq=pets+bg+img+&gs_lcp=CgNpbWcQAzoHCCMQ7wMQJzoECAAQQzoFCAAQgAQ6CAgAEIAEELEDOggIABCxAxCDAToLCAAQgAQQsQMQgwE6BAgAEB46BAgAEBM6CAgAEAUQHhATOggIABAIEB4QEzoGCAAQCBAeUK8GWLggYOYgaAFwAHgAgAFOiAHZBpIBAjEzmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=RFcOYsWNGNGRkwWVipiQCg&bih=881&biw=1745#imgrc=uJumvGDpwkq9hM')!important;
+   background-position: fixed!important;
+}
+
+div#login {
+   font-size: 50px;
+   font-weight: 100;
+}
