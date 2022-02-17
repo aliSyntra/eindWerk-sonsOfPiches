@@ -14,8 +14,8 @@ export class AnimalProfileService {
     this.url = "http://sonsofkittens.be/api/";
   }
 
-  getUseranimal(animalId): Observable<Useranimal[]> {
-    return this.http.get<any[]>(this.url + "useranimals/" + animalId)
+  getUseranimal(animalId): Observable<Useranimal> {
+    return this.http.get<Useranimal>(this.url + "useranimals/" + animalId)
       .pipe(
         tap(result => console.log("Animal fetch: ", result))
       );

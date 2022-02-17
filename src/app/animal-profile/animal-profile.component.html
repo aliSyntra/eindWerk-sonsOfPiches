@@ -54,7 +54,7 @@
             <p>Verjaardag: <b>{{useranimal$ ? useranimal$.birthday : ""}}</b></p>
             <p>Grootte: <b>{{useranimal$ ? useranimal$.size : ""}}cm</b></p>
             <p>Gewicht: <b>{{useranimal$ ? useranimal$.weight : ""}}kg</b></p>
-            <p>BMI: <b></b></p>
+            <p>BMI: <b>{{ animalBMI$ }}</b></p>
             <p>Chipnummer: <b>{{useranimal$ ? useranimal$.chip : ""}}</b></p>
             <p>Verzekeringsnummer: <b>{{useranimal$ ? useranimal$.insurance : ""}}</b></p>
             <p>Medicatie: <b>{{animalMed$ ? animalMed$[0].name : "geen gevonden"}}</b></p>

@@ -1,2 +1,17 @@
-
+<!--medication notification window-->
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasTopLabel">Alerts</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div *ngFor="let useranimal of useranimals$" class="offcanvas-body">
+        <div *ngIf="useranimal.medid; then animalNotiBlock"></div>
+            <ng-template #animalNotiBlock>
+                <p>
+                    <b>{{useranimal.name}}:</b> {{useranimal.description}}
+                </p>
+            </ng-template>
+    </div>
+</div>
+<!--medication notification window END-->
 <router-outlet></router-outlet>

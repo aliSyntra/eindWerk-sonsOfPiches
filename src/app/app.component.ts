@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { MainpageComponent } from "./mainpage/mainpage.component";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular';
+  title = 'Petchalk';
+
+  useranimals$!: any[];
+
+  ngOnInit(): void {
+    this.useranimals$ = JSON.parse(sessionStorage.getItem("userAnimalArray"));
+  }
 }

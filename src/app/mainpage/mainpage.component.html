@@ -57,7 +57,7 @@
         <!--main display div-->
         <div *ngIf="useranimal.medid; then medBlock else normBlock"></div>
         <ng-template #normBlock>
-            <div (click)="gotoAnimalProfile(useranimal.id)" class="col-7">
+            <div class="col-7">
                 <p class="petName mt-3"> {{useranimal.name}} </p>
             </div>
         </ng-template>

@@ -36,7 +36,7 @@ currentAnimal: any = {}
       name: name,
       weight: weight,
       size: size,
-      chipnumber: chipnumber,
+      chip: chipnumber,
       insurance: insurance
     }
     // check

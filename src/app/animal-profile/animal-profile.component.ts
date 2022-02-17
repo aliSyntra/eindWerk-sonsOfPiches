@@ -22,8 +22,8 @@ export class AnimalProfileComponent implements OnInit {
   animalId$!: any;
   animalBMI$!: any;
   
-  animalChartHeight = [25, 26, 26, 27, 26, 30, 31];
-  animalChartWeight = [60, 61, 61, 62, 64, 68, 70];
+  animalChartWeight = [25, 26, 26, 27, 26, 30, 31];
+  animalChartHeight = [60, 61, 61, 62, 64, 68, 70];
   animalChartBMI = [];
 
   ngOnInit(): void {
@@ -38,7 +38,7 @@ export class AnimalProfileComponent implements OnInit {
     this.animalProfileService.getUseranimal(requestedAnimal)
     .subscribe(useranimal => {
       this.useranimal$ = useranimal;
-      console.log("testing: ", useranimal);
+      this.animalBMI$ = this.calcBMI(useranimal.size, useranimal.weight);
     });
 
     //get medication data
@@ -107,19 +107,20 @@ export class AnimalProfileComponent implements OnInit {
 
   chartShowBMI() {
     for(var i = 0; i < this.animalChartHeight.length; i++) {
-      //let meter = height/100;
-      //let kwad = meter**2;
-      //let bmi = weight/meter;
-      let meter:number = this.animalChartHeight[i]/100;
-      let kwad:number = meter**2;
-      let bmi:number = this.animalChartWeight[i]/kwad;
+      let bmi:number = this.calcBMI(this.animalChartHeight[i], this.animalChartWeight[i])
       this.animalChartBMI.push(bmi);
-
-      this.data.datasets[0].label = "BMI";
-      this.data.datasets[0].data = this.animalChartBMI;
-      this.chartComponent.chart.update();
     }
+    this.data.datasets[0].label = "BMI";
+    this.data.datasets[0].data = this.animalChartBMI;
+    this.chartComponent.chart.update();
   }
-
   //Linechart END
+
+  //bmi calculator
+  calcBMI(height:number, weight:number) {
+    let meter = height/100;
+    let kwad = meter**2;
+    let bmi = weight/kwad;
+    return Math.round(bmi);
+  }
 }

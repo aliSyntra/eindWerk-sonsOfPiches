@@ -25,7 +25,10 @@ export class MainpageComponent implements OnInit {
 
     //get users animals
     this.mainpageService.getUseranimals(this.userId)
-    .subscribe(useranimal => this.useranimals$ = useranimal);
+    .subscribe(useranimal => { 
+      this.useranimals$ = useranimal;
+      sessionStorage.setItem("userAnimalArray", JSON.stringify(useranimal));
+    });
   }
 
   gotoAnimalProfile(animalId:number) {
