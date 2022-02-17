@@ -7,7 +7,7 @@
         </div>
     <!-- als je op deze button klikt verschijnen alle notificaties in een dropdown -->
         <div id="notifBTN" class="col-3">
-            <button type="button" (click)="dropdown()" class="btn btn-success"><i class="bi bi-bell"></i></button>
+            <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="bi bi-bell"></i></button>
         </div>
     <!-- dit is gwn een extra div om de buttons uit elkaar te halen  -->
         <div class="col-3">
@@ -39,13 +39,13 @@
     <!-- buttons onder de grafiek -->
     <div class="row">
         <div class="col-4">
-            <button type="button" class="btn btn-primary" id="gewicht">gewicht</button>
+            <button (click)="chartShowWeight()" type="button" class="btn btn-primary" id="gewicht">gewicht</button>
         </div>
         <div class="col-4">
-            <button (click)="chartShowHeight()" type="button" class="btn btn-primary" id="lengte">lengte</button>
+            <button (click)="chartShowHeight()" type="button" class="btn btn-primary" id="lengte">hoogte</button>
         </div>
         <div class="col-4">
-            <button type="button" class="btn btn-primary" id="bcs">BMI</button>
+            <button (click)="chartShowBMI()" type="button" class="btn btn-primary" id="bcs">BMI</button>
         </div>
     </div>
     <!-- div voor de huidige informatie -->
@@ -54,6 +54,7 @@
             <p>Verjaardag: <b>{{useranimal$ ? useranimal$.birthday : ""}}</b></p>
             <p>Grootte: <b>{{useranimal$ ? useranimal$.size : ""}}cm</b></p>
             <p>Gewicht: <b>{{useranimal$ ? useranimal$.weight : ""}}kg</b></p>
+            <p>BMI: <b></b></p>
             <p>Chipnummer: <b>{{useranimal$ ? useranimal$.chip : ""}}</b></p>
             <p>Verzekeringsnummer: <b>{{useranimal$ ? useranimal$.insurance : ""}}</b></p>
             <p>Medicatie: <b>{{animalMed$ ? animalMed$[0].name : "geen gevonden"}}</b></p>

@@ -1,21 +1,30 @@
 import { Component, NgModule, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { ChartComponent } from 'angular2-chartjs';
 
 import { AnimalProfileService } from "../shared/service/animal-profile.service";
+import { Useranimal } from "../../app/shared/model/useranimal.model";
 
 @Component({
   selector: 'app-animal-profile',
   templateUrl: './animal-profile.component.html',
   styleUrls: ['./animal-profile.component.css']
 })
+
 export class AnimalProfileComponent implements OnInit {
- 
+  @ViewChild(ChartComponent) chartComponent: ChartComponent;
+
   constructor(private animalProfileService: AnimalProfileService,
     private _router: Router
     ){}
   useranimal$!: any;
   animalMed$!: any;
   animalId$!: any;
+  animalBMI$!: any;
+  
+  animalChartHeight = [25, 26, 26, 27, 26, 30, 31];
+  animalChartWeight = [60, 61, 61, 62, 64, 68, 70];
+  animalChartBMI = [];
 
   ngOnInit(): void {
     let name = localStorage.getItem('pass');
@@ -27,7 +36,10 @@ export class AnimalProfileComponent implements OnInit {
     this.animalId$=requestedAnimal;
     //get animal data
     this.animalProfileService.getUseranimal(requestedAnimal)
-    .subscribe(useranimal => this.useranimal$ = useranimal);
+    .subscribe(useranimal => {
+      this.useranimal$ = useranimal;
+      console.log("testing: ", useranimal);
+    });
 
     //get medication data
     this.animalProfileService.getAnimalMed(requestedAnimal)
@@ -64,13 +76,14 @@ export class AnimalProfileComponent implements OnInit {
     this._router.navigate(["mainpage"]);
    }
 
+   
   //linechart code
   type = 'line';
   data = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
-        label: "Gewicht",
+        label: "Gewicht (kg)",
         data: [25, 26, 26, 27, 26, 30, 31]
       }
     ]
@@ -80,8 +93,33 @@ export class AnimalProfileComponent implements OnInit {
     maintainAspectRatio: false
   };
 
-  chartShowHeight() {
-    this.data.datasets[0].data = [60, 61, 61, 62, 64, 68, 70];
+  chartShowWeight() {
+    this.data.datasets[0].data = this.animalChartHeight;
+    this.data.datasets[0].label = "Gewicht (kg)";
+    this.chartComponent.chart.update();
   }
+
+  chartShowHeight() {
+    this.data.datasets[0].data = this.animalChartWeight;
+    this.data.datasets[0].label = "Hoogte (cm)";
+    this.chartComponent.chart.update();
+  }
+
+  chartShowBMI() {
+    for(var i = 0; i < this.animalChartHeight.length; i++) {
+      //let meter = height/100;
+      //let kwad = meter**2;
+      //let bmi = weight/meter;
+      let meter:number = this.animalChartHeight[i]/100;
+      let kwad:number = meter**2;
+      let bmi:number = this.animalChartWeight[i]/kwad;
+      this.animalChartBMI.push(bmi);
+
+      this.data.datasets[0].label = "BMI";
+      this.data.datasets[0].data = this.animalChartBMI;
+      this.chartComponent.chart.update();
+    }
+  }
+
   //Linechart END
 }

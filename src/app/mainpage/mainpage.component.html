@@ -7,7 +7,7 @@
         </div>
     <!-- als je op deze button klikt verschijnen alle notificaties in een dropdown -->
         <div id="notifBTN" class="col-3">
-            <button type="button" (click)="dropdown()" class="btn btn-success"><i class="bi bi-bell"></i></button>
+            <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="bi bi-bell"></i></button>
         </div>
     <!-- dit is gwn een extra div om de buttons uit elkaar te halen  -->
         <div class="col-3">
@@ -33,7 +33,6 @@
         <div class="col-1"></div>
     </div>
     <hr/>
-
     <div *ngFor="let useranimal of useranimals$" (click)="gotoAnimalProfile(useranimal.id)" class="row mt-3">
         <!--spacer div-->
         <div class="col-1"></div>

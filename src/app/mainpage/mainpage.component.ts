@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { MainpageService } from "../shared/service/mainpage.service";
-import { Useranimal } from "../../app/shared/model/useranimal.model";
 
 @Component({
   selector: 'app-mainpage',
