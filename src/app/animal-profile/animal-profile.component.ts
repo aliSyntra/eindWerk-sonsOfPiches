@@ -54,6 +54,7 @@ export class AnimalProfileComponent implements OnInit {
   logout(){
     localStorage.setItem("pass","")
     this._router.navigate(["login"]);
+    sessionStorage.removeItem("userAnimalArray")
   }
 
   dropdown(){

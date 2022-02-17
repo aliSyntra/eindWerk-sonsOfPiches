@@ -46,6 +46,7 @@ export class MainpageComponent implements OnInit {
   logout(){
      this._router.navigate(["login"]);
     localStorage.setItem("pass","")
+    sessionStorage.removeItem("userAnimalArray")
   }
   dropdown(){
     console.log("ikieki")
