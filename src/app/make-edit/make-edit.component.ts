@@ -49,9 +49,9 @@ genreType:string;
           weight: weight,
           size: size,
           breed_id: breed,
-          user_id: 1,
-          chip: 25435,
-          insurance: 323443
+          user_id: parseInt(localStorage.getItem("userId")),
+          chip: chipnumber,
+          insurance: insurance
           
           
       };
