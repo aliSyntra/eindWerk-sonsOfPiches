@@ -48,9 +48,6 @@ export class MainpageComponent implements OnInit {
     localStorage.setItem("pass","")
     sessionStorage.removeItem("userAnimalArray")
   }
-  dropdown(){
-    console.log("ikieki")
-  }
   make(){
     this._router.navigate(["makeEdit"]);
   }

@@ -45,9 +45,6 @@ export class MedicationComponent implements OnInit {
     localStorage.setItem("pass","")
     sessionStorage.removeItem("userAnimalArray")
   }
-  dropdown(){
-    console.log("ikieki")
-  }
   make(){
     this._router.navigate(["makeEdit"]);
   }

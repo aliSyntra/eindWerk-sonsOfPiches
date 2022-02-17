@@ -57,10 +57,6 @@ export class AnimalProfileComponent implements OnInit {
     sessionStorage.removeItem("userAnimalArray")
   }
 
-  dropdown(){
-    console.log("ikieki")
-  }
-
   medication(){
     this._router.navigate(["medication"]);
   }

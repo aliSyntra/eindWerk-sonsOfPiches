@@ -61,9 +61,6 @@ genreType:string;
       this.makeEditserv.addAnimal(newMakeAnimalObj);
   }
   //header buttons
-  dropdown(){
-    console.log("ikieki")
-  }
   back(){
      this._router.navigate(["mainpage"]);
   }
