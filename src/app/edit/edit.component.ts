@@ -54,13 +54,8 @@ currentAnimal: any = {}
       alert('Update complete');
     }
       )}
-
-  
-
+      
   //header buttons
-  dropdown(){
-    console.log("ikieki")
-  }
   back(){
      this._router.navigate(["animalProfile"]);
   }
