@@ -15,7 +15,7 @@
     <div class="row">
         <div class=col-12>
           <div class="label">name </div>
-          <input type="text" class="forms"#name placeholder="naam" class="name">
+          <input type="text"#name placeholder="naam" class="name">
         </div>
       </div>
     <!-- email form -->
@@ -38,7 +38,7 @@
     <div class="row">
       <div class="col-2"></div>
       <div class="col-8">
-        <button (click)="login()" id="signupButton" class="btn btn-primary">signup</button>
+        <button (click)="makeUser(name.value,email.value,password.value)" id="signupButton" class="btn btn-primary">signup</button>
       </div>
       <div class="col-2"></div>
     </div>
